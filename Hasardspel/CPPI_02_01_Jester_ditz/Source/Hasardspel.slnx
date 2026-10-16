@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Hasardspel.vcxproj" Id="800ba977-63d4-4bc5-9e0f-538c6d7f173b" />
+</Solution>
