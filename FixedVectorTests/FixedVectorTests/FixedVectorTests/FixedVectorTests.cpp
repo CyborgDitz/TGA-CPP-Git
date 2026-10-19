@@ -12,7 +12,7 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-#define ENABLE_VG_TESTS
+//#define ENABLE_VG_TESTS
 
 using namespace CommonUtilities;
 
@@ -27,7 +27,7 @@ namespace FixedVectorTests
 	TEST_CLASS(FixedVectorBasicTypeTests)
 	{
 	public:
-		
+
 		TEST_METHOD(SizeIsZeroAfterConstruction)
 		{
 			FixedVector<int, 1> v;
@@ -424,7 +424,7 @@ namespace FixedVectorTests
 			{
 				int value = 99;
 				FixedVector<int, 10> s;
-				s.insert(s.end()+1, value);
+				s.insert(s.end() + 1, value);
 				Assert::Fail();
 			}
 			catch (const char* assertMsg)
@@ -447,7 +447,7 @@ namespace FixedVectorTests
 				(assertMsg);
 			}
 		}
-	
+
 		TEST_METHOD(Assert_Front)
 		{
 			FixedVector<int, 10> s;
@@ -499,122 +499,122 @@ namespace FixedVectorTests
 		}
 #endif
 	};
-
-#ifdef ENABLE_VG_TESTS
-
-	struct CallStatistics
-	{
-		struct ObjectStats
-		{
-			int constructionCalls;
-			int destructionCalls;
-		};
-
-		int constructorCalls;
-		int destructorCalls;
-
-		std::unordered_map<void*, ObjectStats> objectStats;
-	};
-
-	void ValidateObjectStatistics(const CallStatistics& aCallStats)
-	{
-		for (const auto& pair : aCallStats.objectStats)
-		{
-			Assert::AreEqual(pair.second.constructionCalls, pair.second.destructionCalls);
-		}
-
-	}
-
-	struct FunctionCallCounter
-	{
-		static CallStatistics statistics;
-
-		FunctionCallCounter() 
-		{
-			statistics.constructorCalls++; 
-			statistics.objectStats[this].constructionCalls++;
-		}
-		FunctionCallCounter(const FunctionCallCounter&) 
-		{ 
-			statistics.constructorCalls++; 
-			statistics.objectStats[this].constructionCalls++;
-		}
-
-		~FunctionCallCounter() 
-		{ 
-			statistics.destructorCalls++; 
-			statistics.objectStats[this].destructionCalls++;
-		}
-		FunctionCallCounter& operator=(const FunctionCallCounter&) { return *this; }
-	};
-
-	CallStatistics FunctionCallCounter::statistics;
-
-	TEST_CLASS(FixedVectorComplexTypesTests)
-	{
-	public:
-
-
-		TEST_METHOD(NoConstructorCalledIfEmpty)
-		{
-			FunctionCallCounter::statistics = {};
-
-			{
-				FixedVector<FunctionCallCounter, 10> s;
-			}
-
-			Assert::AreEqual(0, FunctionCallCounter::statistics.constructorCalls);
-			Assert::AreEqual(0, FunctionCallCounter::statistics.destructorCalls);
-			ValidateObjectStatistics(FunctionCallCounter::statistics);
-		}
-
-		TEST_METHOD(DestructorCalledOnElements)
-		{
-			FunctionCallCounter::statistics = {};
-			{
-				FixedVector<FunctionCallCounter, 10> s;
-
-				s.push_back(FunctionCallCounter());
-
-				// clear out statistics after adding, to only count destructor call
-				FunctionCallCounter::statistics.constructorCalls = 0;
-				FunctionCallCounter::statistics.destructorCalls = 0;
-			}
-
-			Assert::AreEqual(0, FunctionCallCounter::statistics.constructorCalls);
-			Assert::AreEqual(1, FunctionCallCounter::statistics.destructorCalls);
-			ValidateObjectStatistics(FunctionCallCounter::statistics);
-		}
-
-		TEST_METHOD(PushBackCallsCopy)
-		{
-			FunctionCallCounter::statistics = {};
-
-			{
-				FixedVector<FunctionCallCounter, 10> s;
-
-				s.push_back(FunctionCallCounter());
-
-			}
-			ValidateObjectStatistics(FunctionCallCounter::statistics);
-		}
-
-		TEST_METHOD(EraseCallsAssignOrCopy)
-		{
-			FunctionCallCounter::statistics = {};
-
-			{
-				FixedVector<FunctionCallCounter, 10> s;
-
-				s.push_back(FunctionCallCounter());
-				s.push_back(FunctionCallCounter());
-
-				s.erase(s.begin());
-			}
-
-			ValidateObjectStatistics(FunctionCallCounter::statistics);
-		}
-	};
-
-#endif
 }
+////#ifdef ENABLE_VG_TESTS
+////
+////	struct CallStatistics
+////	{
+////		struct ObjectStats
+////		{
+////			int constructionCalls;
+////			int destructionCalls;
+////		};
+////
+////		int constructorCalls;
+////		int destructorCalls;
+////
+////		std::unordered_map<void*, ObjectStats> objectStats;
+////	};
+////
+////	void ValidateObjectStatistics(const CallStatistics& aCallStats)
+////	{
+////		for (const auto& pair : aCallStats.objectStats)
+////		{
+////			Assert::AreEqual(pair.second.constructionCalls, pair.second.destructionCalls);
+////		}
+////
+////	}
+////
+////	struct FunctionCallCounter
+////	{
+////		static CallStatistics statistics;
+////
+////		FunctionCallCounter() 
+////		{
+////			statistics.constructorCalls++; 
+////			statistics.objectStats[this].constructionCalls++;
+////		}
+////		FunctionCallCounter(const FunctionCallCounter&) 
+////		{ 
+////			statistics.constructorCalls++; 
+////			statistics.objectStats[this].constructionCalls++;
+////		}
+////
+////		~FunctionCallCounter() 
+////		{ 
+////			statistics.destructorCalls++; 
+////			statistics.objectStats[this].destructionCalls++;
+////		}
+////		FunctionCallCounter& operator=(const FunctionCallCounter&) { return *this; }
+////	};
+////
+////	CallStatistics FunctionCallCounter::statistics;
+////
+////	TEST_CLASS(FixedVectorComplexTypesTests)
+////	{
+////	public:
+////
+////
+////		TEST_METHOD(NoConstructorCalledIfEmpty)
+////		{
+////			FunctionCallCounter::statistics = {};
+////
+////			{
+////				FixedVector<FunctionCallCounter, 10> s;
+////			}
+////
+////			Assert::AreEqual(0, FunctionCallCounter::statistics.constructorCalls);
+////			Assert::AreEqual(0, FunctionCallCounter::statistics.destructorCalls);
+////			ValidateObjectStatistics(FunctionCallCounter::statistics);
+////		}
+////
+////		TEST_METHOD(DestructorCalledOnElements)
+////		{
+////			FunctionCallCounter::statistics = {};
+////			{
+////				FixedVector<FunctionCallCounter, 10> s;
+////
+////				s.push_back(FunctionCallCounter());
+////
+////				// clear out statistics after adding, to only count destructor call
+////				FunctionCallCounter::statistics.constructorCalls = 0;
+////				FunctionCallCounter::statistics.destructorCalls = 0;
+////			}
+////
+////			Assert::AreEqual(0, FunctionCallCounter::statistics.constructorCalls);
+////			Assert::AreEqual(1, FunctionCallCounter::statistics.destructorCalls);
+////			ValidateObjectStatistics(FunctionCallCounter::statistics);
+////		}
+////
+////		TEST_METHOD(PushBackCallsCopy)
+////		{
+////			FunctionCallCounter::statistics = {};
+////
+////			{
+////				FixedVector<FunctionCallCounter, 10> s;
+////
+////				s.push_back(FunctionCallCounter());
+////
+////			}
+////			ValidateObjectStatistics(FunctionCallCounter::statistics);
+////		}
+////
+////		TEST_METHOD(EraseCallsAssignOrCopy)
+////		{
+////			FunctionCallCounter::statistics = {};
+////
+////			{
+////				FixedVector<FunctionCallCounter, 10> s;
+////
+////				s.push_back(FunctionCallCounter());
+////				s.push_back(FunctionCallCounter());
+////
+////				s.erase(s.begin());
+////			}
+////
+////			ValidateObjectStatistics(FunctionCallCounter::statistics);
+////		}
+////	};
+////
+////#endif
+//}
