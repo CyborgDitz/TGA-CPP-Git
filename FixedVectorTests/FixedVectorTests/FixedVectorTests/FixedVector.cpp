@@ -1,7 +1,7 @@
 ﻿#include "pch.h"
 
-namespace CommonUtilities
-    {
+// namespace CommonUtilities
+//     {
         
 
 template <typename Type, unsigned int CAPACITY, typename SizeType>
@@ -176,4 +176,4 @@ SizeType CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::capacity() cons
 {
     
 }
-    }
+
