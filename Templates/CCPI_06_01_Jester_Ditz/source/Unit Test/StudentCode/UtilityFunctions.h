@@ -13,48 +13,44 @@ namespace CommonUtilities
 	}
 	template<typename T>T Abs(T a)
 	{
-		
+
 		if (a < 0)
 		{
 			return (a * -1);
 		}
-		
-			return (a);
-	}
 
-	template<typename T>T Clamp(T value, T min, T max)
+		return (a);
+	}
+	template<typename T>T Clamp(T aValue, T aMin, T aMax)
 	{
+		assert(aMin < aMax);
 		
-		if (value < 0 || min < 0 || max < 0)
+		if (aValue < aMin)
 		{
-			if (value > 0 && max > 0)
-			{
-				return (value < max ? value : max);
-			}
-			return (value > min ? max : min);
+			return aMin;
 		}
-	
-		if (max != min)
+		else if (aValue > aMax)
 		{
-			return (value > min ? value : min);
-
+			return aMax
 		}
-
-		return max;
-	
+		else
+		{
+			return aValue;
+		}
 	
 	}
+
 
 	template<typename T>T Lerp(T a, T b, float c)
 	{
 
-		return static_cast<T>(a + c *(b - a));
+		return static_cast<T>(a + c * (b - a));
 	}
-	template<typename T>void Swap(T &a, T &b)
+	template<typename T>void Swap(T& a, T& b)
 	{
 		T c = a;
 		a = b;
 		b = c;
-	
+
 	}
 }

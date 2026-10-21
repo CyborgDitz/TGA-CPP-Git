@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\TGA CPP Git\\Templates\\CCPI_06_01_Jester_Ditz\\source\\Unit Test\\TempFiles\\UtilityFunctions.obj",
+            "outputs": [
+                "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\TGA CPP Git\\Templates\\CCPI_06_01_Jester_Ditz\\source\\Unit Test\\TempFiles\\UtilityFunctions.h.obj.dt.module.json",
+                "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\TGA CPP Git\\Templates\\CCPI_06_01_Jester_Ditz\\source\\Unit Test\\TempFiles\\UtilityFunctions.h.obj.dt.d.json",
+                "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\TGA CPP Git\\Templates\\CCPI_06_01_Jester_Ditz\\source\\Unit Test\\\\TempFiles\\CPPI - U06 - Template Utilities [CU] - UnitTest_Debug.pch"
+            ],
+            "requires": []
+        }
+    ]
+}

@@ -129,6 +129,7 @@ namespace Uppgift12TemplateUtilitiesCUUnitTest
 		TEST_METHOD(MinHigherThanMax_ShouldAssert)
 		{
 			Assert::AreEqual(CommonUtilities::Clamp(60, 500, 50), 50);
+
 		}
 
 	};

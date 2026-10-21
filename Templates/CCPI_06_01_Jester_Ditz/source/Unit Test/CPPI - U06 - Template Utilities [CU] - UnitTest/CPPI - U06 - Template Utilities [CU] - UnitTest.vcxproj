@@ -176,6 +176,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\StudentCode\UtilityFunctions.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="UtilityFunctions.h" />
   </ItemGroup>
