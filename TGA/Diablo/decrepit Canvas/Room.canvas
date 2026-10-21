@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"8491d956a99c58a0","type":"text","text":"Class Room\nmyEnemies<vector>","x":39,"y":-137,"width":275,"height":275,"color":"4"},
+		{"id":"bbbcfac2fedae320","type":"text","text":"class Door\nmyDoorEnter\nmyDoorExit\n\n\n\n","x":-314,"y":-102,"width":250,"height":140,"color":"4"},
+		{"id":"007a7043d42cec34","type":"text","text":"myDoorExit","x":-300,"y":78,"width":236,"height":60,"color":"6"}
+	],
+	"edges":[
+		{"id":"d058681cc438386a","fromNode":"bbbcfac2fedae320","fromSide":"right","toNode":"8491d956a99c58a0","toSide":"left"},
+		{"id":"7fd7b25ee7b49f30","fromNode":"007a7043d42cec34","fromSide":"right","toNode":"8491d956a99c58a0","toSide":"left"}
+	]
+}

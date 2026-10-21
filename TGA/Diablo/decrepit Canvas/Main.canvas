@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"id":"f21f2590d437bfd2","type":"group","x":-177,"y":80,"width":290,"height":300,"label":"CheatMenu"},
+		{"id":"5303c107140a89e0","type":"group","x":183,"y":80,"width":290,"height":200,"label":"CheatMenu"},
+		{"id":"8bb5816cefb3b9bb","type":"text","text":"Immortal (true/false)","x":208,"y":100,"width":250,"height":60},
+		{"id":"0bb424061fcf9476","type":"text","text":" damage ifninity (true/false)","x":208,"y":200,"width":250,"height":60},
+		{"id":"e0fdf6e9e65eac06","type":"text","text":"Main:\nprint welcome\nPrint menu Choice\n1 - game\n2 - cheats on\n3 - quit\nchoice -","x":-192,"y":-380,"width":320,"height":180},
+		{"id":"cdece7812e10c8e8","type":"text","text":"Quit","x":208,"y":-315,"width":250,"height":50},
+		{"id":"52005d5578cd394d","type":"text","text":"Game","x":-472,"y":-75,"width":250,"height":60},
+		{"id":"130143f2e0745d4b","type":"text","text":"","x":-472,"y":70,"width":250,"height":60},
+		{"id":"59dd98a9411f39c9","type":"text","text":"Immortal (true/false)","x":-157,"y":100,"width":250,"height":60},
+		{"id":"4ecd2afacdcf2999","type":"text","text":" damage ifninity (true/false)","x":-157,"y":200,"width":250,"height":60},
+		{"id":"edf60f8bfb1fbf5f","type":"text","text":"Exit to menu","x":-157,"y":300,"width":250,"height":60},
+		{"id":"af38c30445f06e8e","type":"text","text":"Cheats","x":-157,"y":-75,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"35984cd4d347617d","fromNode":"59dd98a9411f39c9","fromSide":"right","toNode":"8bb5816cefb3b9bb","toSide":"left","fromEnd":"arrow","color":"#ee00ff"},
+		{"id":"583ab9d25e9284c0","fromNode":"0bb424061fcf9476","fromSide":"left","toNode":"4ecd2afacdcf2999","toSide":"right","fromEnd":"arrow","color":"#fb00ff"},
+		{"id":"870fa5faf6d37bf6","fromNode":"e0fdf6e9e65eac06","fromSide":"bottom","toNode":"52005d5578cd394d","toSide":"top","color":"3"},
+		{"id":"363882beb660645d","fromNode":"e0fdf6e9e65eac06","fromSide":"bottom","toNode":"af38c30445f06e8e","toSide":"top","color":"3"},
+		{"id":"95504779017337cb","fromNode":"e0fdf6e9e65eac06","fromSide":"right","toNode":"cdece7812e10c8e8","toSide":"left","color":"3"},
+		{"id":"d42f14ee73b1a0a7","fromNode":"52005d5578cd394d","fromSide":"bottom","toNode":"130143f2e0745d4b","toSide":"top","color":"3"},
+		{"id":"2130c15ffb0f17b9","fromNode":"af38c30445f06e8e","fromSide":"bottom","toNode":"59dd98a9411f39c9","toSide":"top"},
+		{"id":"7df32268ae0bfbf0","fromNode":"af38c30445f06e8e","fromSide":"bottom","toNode":"4ecd2afacdcf2999","toSide":"top"},
+		{"id":"3d35cc8e34f8426f","fromNode":"af38c30445f06e8e","fromSide":"bottom","toNode":"edf60f8bfb1fbf5f","toSide":"top","fromEnd":"arrow","color":"#ee00ff"}
+	]
+}

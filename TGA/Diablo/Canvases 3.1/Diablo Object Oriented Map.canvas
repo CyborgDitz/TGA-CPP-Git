@@ -1,0 +1,31 @@
+{
+	"nodes":[
+		{"id":"dfa18da63f2eb22f","type":"group","x":-121,"y":-553,"width":605,"height":271,"label":"Untitled group"},
+		{"id":"e7db49450e9e4b75","type":"group","x":-609,"y":-14,"width":623,"height":228,"label":"Untitled group"},
+		{"id":"1c434431c3c78cae","type":"text","text":"class Door\nmyDoorEnter\nmyDoorExit\n\n\n\n","x":-589,"y":101,"width":250,"height":93,"color":"4"},
+		{"id":"8402bd513db726a7","type":"text","text":"Class Room\nmyEnemies<vector>","x":-589,"y":6,"width":250,"height":81,"color":"4"},
+		{"id":"db6e332556103349","type":"text","text":"class GameManager\n#Dungeon //Room and Door\n#Character \n//Character player\n//Character enemy\n","x":90,"y":-59,"width":227,"height":319,"color":"4"},
+		{"id":"8ab0ad90d52a50fc","type":"text","text":"class Dungeon Manager\n#Room\n#door","x":-256,"y":46,"width":250,"height":110,"color":"4"},
+		{"id":"f027f0b71523d05e","type":"text","text":"cpp.\nint GetInput\nPrint / says data","x":-494,"y":-370,"width":238,"height":135},
+		{"id":"75a982df8e228ece","type":"text","text":"class Library","x":-488,"y":-194,"width":227,"height":60,"color":"4"},
+		{"id":"6e0adb72ba2f3cc3","type":"text","text":"Player\n","x":-101,"y":-533,"width":250,"height":60,"color":"4"},
+		{"id":"4808eae7f9442b05","type":"text","text":"class Explore ??\nClass for potential seperation","x":-300,"y":370,"width":250,"height":110,"color":"#ffffff"},
+		{"id":"b7d7addf41ca9f09","type":"text","text":"Diablo int Main","x":114,"y":310,"width":180,"height":60},
+		{"id":"9c18cb7790ef27f9","type":"text","text":"enemy","x":214,"y":-533,"width":250,"height":60,"color":"4"},
+		{"id":"5f1b96df237716a4","type":"text","text":"Character #player #enemy","x":90,"y":-357,"width":250,"height":55,"color":"4"},
+		{"id":"f2fafc686a6ff638","type":"text","text":"class Combat #GameManager\n//Player and Enemy inside","x":400,"y":33,"width":227,"height":135,"color":"4"}
+	],
+	"edges":[
+		{"id":"f018d05c63aa485a","fromNode":"6e0adb72ba2f3cc3","fromSide":"bottom","toNode":"5f1b96df237716a4","toSide":"top"},
+		{"id":"47b83757d969b305","fromNode":"9c18cb7790ef27f9","fromSide":"bottom","toNode":"5f1b96df237716a4","toSide":"top"},
+		{"id":"d079424654fcb6c5","fromNode":"5f1b96df237716a4","fromSide":"bottom","toNode":"db6e332556103349","toSide":"top"},
+		{"id":"846d7a23b506c7da","fromNode":"1c434431c3c78cae","fromSide":"right","toNode":"8ab0ad90d52a50fc","toSide":"left"},
+		{"id":"5d60c3df1d3ecaf7","fromNode":"8402bd513db726a7","fromSide":"right","toNode":"8ab0ad90d52a50fc","toSide":"left"},
+		{"id":"68f2c114cdfacd15","fromNode":"db6e332556103349","fromSide":"bottom","toNode":"b7d7addf41ca9f09","toSide":"top","toEnd":"none"},
+		{"id":"b752569c8845cea3","fromNode":"8ab0ad90d52a50fc","fromSide":"right","toNode":"db6e332556103349","toSide":"left"},
+		{"id":"f44062d96d80db38","fromNode":"75a982df8e228ece","fromSide":"right","toNode":"db6e332556103349","toSide":"left"},
+		{"id":"67ea0dd349a9e83e","fromNode":"4808eae7f9442b05","fromSide":"top","toNode":"8ab0ad90d52a50fc","toSide":"bottom","toEnd":"none"},
+		{"id":"bba09e999ab3ff59","fromNode":"f027f0b71523d05e","fromSide":"bottom","toNode":"75a982df8e228ece","toSide":"top","color":"3"},
+		{"id":"8c38dfdf28cf4486","fromNode":"db6e332556103349","fromSide":"right","toNode":"f2fafc686a6ff638","toSide":"left"}
+	]
+}

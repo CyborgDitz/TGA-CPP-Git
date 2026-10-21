@@ -1,0 +1,32 @@
+{
+	"nodes":[
+		{"id":"a18b162a3aafc077","type":"group","x":-165,"y":-815,"width":330,"height":1631,"color":"1","label":"Combat Class"},
+		{"id":"5b91dde1455ed091","type":"group","x":-145,"y":-464,"width":290,"height":684,"color":"3","label":"Player atk"},
+		{"id":"87fcba4c6dfa9263","type":"group","x":-145,"y":276,"width":290,"height":520,"color":"3","label":"Enemies atk"},
+		{"id":"ba826bca03a229c1","type":"text","text":"pick target","x":-125,"y":-444,"width":250,"height":60},
+		{"id":"350e831769d8cf26","type":"text","text":"print all enemies and stats","x":-125,"y":-597,"width":250,"height":60},
+		{"id":"7405db440f59fbcc","type":"text","text":"if population = zero return","x":-125,"y":316,"width":250,"height":60},
+		{"id":"32943025140d60b2","type":"text","text":"for population size \nenemy atk player\nprint dmg","x":-125,"y":416,"width":250,"height":100},
+		{"id":"1e05f848312a1869","type":"text","text":"if godmode enemy dmg is 0","x":-125,"y":556,"width":250,"height":56},
+		{"id":"9c3419c5c94048e9","type":"text","text":"while playerIsalive & \nvector population Exist ","x":-125,"y":-712,"width":250,"height":55},
+		{"id":"29adb973616667d7","type":"text","text":"Combat #combat ","x":-125,"y":-795,"width":250,"height":60,"color":"3"},
+		{"id":"d4b6de05aa981fbf","type":"text","text":"enemy  in target in vector takes dmg","x":-125,"y":0,"width":250,"height":60},
+		{"id":"f01ae370d62ad892","type":"text","text":"erase enemy if enemyIsalive == false from vector","x":-125,"y":140,"width":250,"height":60},
+		{"id":"926b0921017fa981","type":"text","text":"player take dmg per enemy","x":-125,"y":656,"width":250,"height":60},
+		{"id":"5ba2514f822e2cbd","type":"text","text":"Attack Enemy target in vector","x":-125,"y":-289,"width":250,"height":60},
+		{"id":"61e3ff8d530d9258","type":"text","text":"if cheat uber dmg","x":-125,"y":-140,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"9cc7bd5b6b9a33f9","fromNode":"d4b6de05aa981fbf","fromSide":"bottom","toNode":"f01ae370d62ad892","toSide":"top"},
+		{"id":"105a938efc8e9972","fromNode":"61e3ff8d530d9258","fromSide":"bottom","toNode":"d4b6de05aa981fbf","toSide":"top"},
+		{"id":"66ec3d462473f3d0","fromNode":"9c3419c5c94048e9","fromSide":"bottom","toNode":"350e831769d8cf26","toSide":"top"},
+		{"id":"e233551dc7e170d2","fromNode":"29adb973616667d7","fromSide":"bottom","toNode":"9c3419c5c94048e9","toSide":"top"},
+		{"id":"af9b0fd8c48e9f28","fromNode":"ba826bca03a229c1","fromSide":"bottom","toNode":"5ba2514f822e2cbd","toSide":"top"},
+		{"id":"11fa6afcbbe34e89","fromNode":"350e831769d8cf26","fromSide":"bottom","toNode":"ba826bca03a229c1","toSide":"top"},
+		{"id":"fbb6d8e658ca4e56","fromNode":"f01ae370d62ad892","fromSide":"bottom","toNode":"7405db440f59fbcc","toSide":"top"},
+		{"id":"d50e7f857d4117e9","fromNode":"7405db440f59fbcc","fromSide":"bottom","toNode":"32943025140d60b2","toSide":"top"},
+		{"id":"40cec31ac30c97b9","fromNode":"32943025140d60b2","fromSide":"bottom","toNode":"1e05f848312a1869","toSide":"top"},
+		{"id":"57626990b64aaa22","fromNode":"1e05f848312a1869","fromSide":"bottom","toNode":"926b0921017fa981","toSide":"top"},
+		{"id":"53c017be5874dcf5","fromNode":"5ba2514f822e2cbd","fromSide":"bottom","toNode":"61e3ff8d530d9258","toSide":"top"}
+	]
+}

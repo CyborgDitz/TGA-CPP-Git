@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"id":"4f9506b002d4f376","type":"group","x":-695,"y":-578,"width":1359,"height":1120,"color":"1","label":"PlayGame"},
+		{"id":"6bf14fb423b1ee0e","type":"group","x":-609,"y":-418,"width":1120,"height":780,"color":"#ee00ff","label":"SWITCH Enum State -> Main Menu"},
+		{"id":"6fa047d6a8d5191c","type":"text","text":"Main == Play","x":-152,"y":162,"width":127,"height":55},
+		{"id":"489c596cd3db3fdb","type":"text","text":"==Cheats","x":7,"y":167,"width":156,"height":50},
+		{"id":"6f040ec97dda3e7e","type":"text","text":"Default ","x":211,"y":167,"width":160,"height":50},
+		{"id":"ba9eecbd357de17c","type":"text","text":"Quit Game","x":-361,"y":282,"width":167,"height":60},
+		{"id":"b60c53858b5d50d4","type":"text","text":"==Exit","x":-336,"y":167,"width":116,"height":60},
+		{"id":"0f1725ac529615b0","type":"text","text":"Order:\nMain\n","x":-150,"y":-518,"width":250,"height":60},
+		{"id":"01b62ffa3298e4a6","type":"text","text":"Exit\nPlay\nCheats\nMenu\nCount","x":-150,"y":-118,"width":250,"height":140},
+		{"id":"de9d60fa126ccff0","type":"text","text":"switch myMainState Enum\n","x":-150,"y":-238,"width":250,"height":50},
+		{"id":"633abf984319a455","type":"text","text":"While myMainState != Exit && myPlayer.isAlive","x":-150,"y":-378,"width":250,"height":60},
+		{"id":"612fd046af1ba2e9","type":"text","text":"Start Room Loop\n","x":-213,"y":402,"width":250,"height":100,"color":"3"}
+	],
+	"edges":[
+		{"id":"e49a826ecd7afcd7","fromNode":"6fa047d6a8d5191c","fromSide":"bottom","toNode":"612fd046af1ba2e9","toSide":"top"},
+		{"id":"c931a9e3a179b55c","fromNode":"01b62ffa3298e4a6","fromSide":"bottom","toNode":"6fa047d6a8d5191c","toSide":"top"},
+		{"id":"7eb08dbce3ffe529","fromNode":"01b62ffa3298e4a6","fromSide":"bottom","toNode":"489c596cd3db3fdb","toSide":"top"},
+		{"id":"a299c085fe41393f","fromNode":"01b62ffa3298e4a6","fromSide":"bottom","toNode":"6f040ec97dda3e7e","toSide":"top"},
+		{"id":"0716aec517118a17","fromNode":"b60c53858b5d50d4","fromSide":"bottom","toNode":"ba9eecbd357de17c","toSide":"top"},
+		{"id":"623cf58b13c2424d","fromNode":"01b62ffa3298e4a6","fromSide":"bottom","toNode":"b60c53858b5d50d4","toSide":"top"},
+		{"id":"cc6d325f2aad2a64","fromNode":"0f1725ac529615b0","fromSide":"bottom","toNode":"633abf984319a455","toSide":"top"},
+		{"id":"736e248353938e3f","fromNode":"de9d60fa126ccff0","fromSide":"bottom","toNode":"01b62ffa3298e4a6","toSide":"top"},
+		{"id":"f58c65608facda1d","fromNode":"633abf984319a455","fromSide":"bottom","toNode":"de9d60fa126ccff0","toSide":"top"}
+	]
+}

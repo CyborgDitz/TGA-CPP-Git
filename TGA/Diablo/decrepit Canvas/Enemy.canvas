@@ -1,0 +1,8 @@
+{
+	"nodes":[
+		{"id":"7c87891cd3bb2708","type":"text","text":".h\nmyHealth\nmyDamage\nisAlive\n\n.cpp\nattack\ntakeDamage\ndealDamage\n\n","x":-10,"y":-269,"width":350,"height":320,"color":"6"},
+		{"id":"c36b5a591307dcc2","type":"text","text":"attack at Player\n\"Gobbo atk at player for 6 dmg.\"\n.Player take X damage of 6 - def","x":7,"y":89,"width":333,"height":190,"color":"3"},
+		{"id":"caea6a3386cb6ab0","type":"text","text":"enemy","x":-340,"y":-277,"width":250,"height":60,"color":"4"}
+	],
+	"edges":[]
+}

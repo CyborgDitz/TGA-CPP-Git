@@ -1,0 +1,297 @@
+{
+  "main": {
+    "id": "91f617fab10ffbea",
+    "type": "split",
+    "children": [
+      {
+        "id": "02cd20338fc28594",
+        "type": "tabs",
+        "dimension": 70.62999112688554,
+        "children": [
+          {
+            "id": "0a54970f06217efe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Reusable Class Canvas/SetName Janky Temp.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SetName Janky Temp"
+            }
+          },
+          {
+            "id": "fd4c8ea85cd825e0",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Uppgift 8 Bibliotek och timrr/Sammanfattning presentation.png"
+              },
+              "icon": "lucide-image",
+              "title": "Sammanfattning presentation"
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "75e31c6e63d63192",
+        "type": "tabs",
+        "dimension": 29.37000887311446,
+        "children": [
+          {
+            "id": "5297c4d8ea55e350",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide.canvas",
+                "viewState": {
+                  "x": -704.5,
+                  "y": 3013,
+                  "zoom": -3.0124754455051628
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Diablo 4.2 Divide"
+            }
+          },
+          {
+            "id": "279b6c55fd381b98",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide 1.canvas",
+                "viewState": {
+                  "x": -684.5,
+                  "y": 2682.5,
+                  "zoom": -3.024490464280753
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Diablo 4.2 Divide 1"
+            }
+          },
+          {
+            "id": "8e20edf5339fb542",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide.canvas",
+                "viewState": {
+                  "x": -704.5,
+                  "y": 3013,
+                  "zoom": -3.0124754455051628
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Diablo 4.2 Divide"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d079763057bb0bac",
+    "type": "split",
+    "children": [
+      {
+        "id": "a61208a02b9cbd58",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "01288612a8f54e69",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "16cdd6fbb8352d0e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#TODO",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "1e822ecccc3fc4c6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "3e142f370520b6c4",
+    "type": "split",
+    "children": [
+      {
+        "id": "bca57ce6346768cd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "beff66a2726503b5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Diablo/Diablo4.1.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "5104e40eaac2acef",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Diablo/Diablo4.1.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "9faa3cdf03237992",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e5ebe414684e9c32",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "45354c8793d26f41",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Diablo/Diablo4.1.canvas",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "fd4c8ea85cd825e0",
+  "lastOpenFiles": [
+    "CPPI - 23 - (Mer detaljer) Eget bibliotek och Timer.pptx",
+    "Uppgift 8 Bibliotek och timrr/CPPI - 23 - (Mer detaljer) Eget bibliotek och Timer.pptx",
+    "Uppgift 8 Bibliotek och timrr/Uppgift 8.md",
+    "Uppgift 8 Bibliotek och timrr/Sammanfattning presentation.png",
+    "Pasted image 20261020112839.png",
+    "Uppgift 8 Bibliotek och timrr",
+    "Reusable Class Canvas/SetName Janky Temp.md",
+    "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide.canvas",
+    "Diablo/Pasted image 20261009091719.png",
+    "Diablo/Pasted image 20261009091820.png",
+    "Diablo/Diablo 4.2.canvas",
+    "Reusable Class Canvas/Combat Class 4.2.canvas",
+    "Diablo/Canvases 3.1/Diablo Object Oriented Map.canvas",
+    "Reusable Class Canvas/Enemy class.canvas",
+    "Reusable Class Canvas/Combat Class 4.1.canvas",
+    "Diablo/Diablo 4.1.3 Divide Reviewed.canvas",
+    "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide Await review.canvas",
+    "Diablo/decrepit Canvas/Enemy.canvas",
+    "Diablo/decrepit Canvas/Diablo4.1 backup.canvas",
+    "Diablo/Diabllob.md",
+    "Reusable Class Canvas",
+    "Untitled.base",
+    "Combat Class.md",
+    "Diablo/Questions Diablo.md",
+    "Diablo/Reviewed archived Canvases",
+    "Diablo/Canvases 3.1",
+    "Diablo/decrepit Canvas",
+    "Welcome.md",
+    "Diablo"
+  ]
+}

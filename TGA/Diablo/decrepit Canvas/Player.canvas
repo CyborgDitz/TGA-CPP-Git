@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"d566cea043b8fc51","type":"text","text":".h\nSTR\nDEX\nVIT\nATK = (STRxDEX)\nmaxHelath = (VIT x4)(STR x6)(DEXx3)\nCarryCap = (str + dex/3)\nDefense = (STR + DEX)\n.h\nmyMinHealth\nmyMaxHealth\nmyDamage\nisAlive\n\n.cpp\nattack\ntakeDamage\ndealDamage","x":-361,"y":-456,"width":350,"height":454,"color":"6"},
+		{"id":"ba475c2b37807aca","type":"text","text":"Player\n","x":79,"y":-456,"width":250,"height":60,"color":"4"},
+		{"id":"cc4bb48eb8e7bb54","type":"text","text":"\nprintStats\nopenDoor\n\nif(isdead)","x":79,"y":-376,"width":250,"height":160,"color":"4"},
+		{"id":"5d27795893b6bfab","type":"text","text":"player attack X monster in VECTOR monstsers","x":39,"y":-169,"width":250,"height":63}
+	],
+	"edges":[]
+}
