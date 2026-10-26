@@ -50,7 +50,7 @@ void Room::PrintRoomData(const std::vector<Enemy>* aPopulation) const
 
 void Room::PrintEnterRoom(const Player& aPlayer) const
 {
-    system("cls");
+  
     std::cout << aPlayer.GetName() << '\t' <<
         " enters the... " << '\t' <<
         myName << '\n' << std::endl;

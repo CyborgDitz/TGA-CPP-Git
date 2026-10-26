@@ -76,9 +76,9 @@ void GameManager::SetCheatState(Player& aPlayer)
             }
         case CheatState::GodMode :
             {
-                if (aPlayer.GetInfinite() == true)
+                if (aPlayer.GetGodMode() == true)
                 {
-                    aPlayer.SetInfinite(false);
+                    aPlayer.SetGodMode(false);
                     std::cout << "You turned off infinite damage" << std::endl;
                 }
 
@@ -91,7 +91,7 @@ void GameManager::SetCheatState(Player& aPlayer)
             }
         case CheatState::InfiniteDPS :
             {
-                if (aPlayer.GetGodMode() == true)
+                if (aPlayer.GetInfinite() == true)
                 {
                     aPlayer.SetInfinite(false);
                     std::cout << "You turned off infinite damage" << std::endl;
@@ -238,8 +238,8 @@ void GameManager::SelectRoomMenuChoices()
     {
         std::cout << "These are the choices" << std::endl;
         Library::SayRoomMenu();
-        const int minInput = static_cast<int>(CheatState::Exit);
-        const int maxInput = static_cast<int>(CheatState::Count);
+        const int minInput = static_cast<int>(RoomState::Exit);
+        const int maxInput = static_cast<int>(RoomState::Count)-1;
         const int input = Library::SetInput(minInput, maxInput);
         myRoomState = static_cast<RoomState>(input);
     }
@@ -320,8 +320,7 @@ void GameManager::StartRoomLoop()
     PopulateRoom();
     while (myPlayer.GetIsAlive() && isDiabloDead == false && myMainState == MainState::Play)
     {
-        system("cls");
-
+       
         {
             std::cout << "I am in room: " << myCurrentRoom->GetName() << std::endl;
             myCurrentRoom->PrintRoomData(&myPopulation);
@@ -440,7 +439,7 @@ void GameManager::PlayGame()
 {
     while (myMainState != MainState::Exit && myPlayer.GetIsAlive() && isDiabloDead == false && myPlayer.GetIsAlive())
     {
-        system("cls");
+    
         PrintMainMenuChoices(myPlayer); //TODO below func in mainmenu?
         const int maxInput = static_cast<int>(MainState::Cheats);
         SetGameState(static_cast<MainState>(Library::SetInput(0, maxInput)));
