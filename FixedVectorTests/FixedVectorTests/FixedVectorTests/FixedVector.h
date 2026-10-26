@@ -61,3 +61,182 @@ namespace CommonUtilities
 		//alignas(Type) char myStorage[sizeof(Type) * CAPACITY]; // <- needed for VG
 	};
 }
+
+namespace CommonUtilities
+    {
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::FixedVector()
+        {
+    
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::FixedVector(const FixedVector& aFixedVector)
+        {
+        
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::FixedVector::~FixedVector()
+        {
+        	
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        CommonUtilities::FixedVector<Type, CAPACITY, SizeType>& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::operator
+        =(const FixedVector& aFixedVector) 
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::front()
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        const Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::front() const
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::back()
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        const Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::back() const
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::at(SizeType aIndex)
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        const Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::at(SizeType aIndex) const
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        const Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::operator[](SizeType aIndex) const
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::operator[](SizeType aIndex)
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::push_back(const Type& aObject)
+        {
+        	return Type;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::insert(iterator aIterator, const Type& aObject)
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::erase(iterator aIterator)
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::pop_back()
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        typename CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::iterator CommonUtilities::FixedVector<Type, CAPACITY,
+            SizeType>::begin() 
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        typename CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::const_iterator CommonUtilities::FixedVector<Type,
+            CAPACITY, SizeType>::begin() const
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        typename CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::const_iterator CommonUtilities::FixedVector<Type,
+            CAPACITY, SizeType>::cbegin() const
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        typename CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::iterator CommonUtilities::FixedVector<Type, CAPACITY,
+            SizeType>::end()
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        typename CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::const_iterator CommonUtilities::FixedVector<Type,
+            CAPACITY, SizeType>::end() const
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        typename CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::const_iterator CommonUtilities::FixedVector<Type,
+            CAPACITY, SizeType>::cend() const
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::clear()
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::resize(SizeType newSize)
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::resize(SizeType newSize, const Type& value)
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        bool CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::empty() const
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        SizeType CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::size() const
+        {
+        	return 0;
+        }
+
+        template <typename Type, unsigned int CAPACITY, typename SizeType>
+        SizeType CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::capacity() const
+        {
+		return 0;
+        }
+    }
+
