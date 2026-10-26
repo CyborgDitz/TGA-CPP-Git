@@ -171,6 +171,22 @@ void GameManager::ChooseDoor()
         if (input == 1)
         {
             myCurrentRoom = &myCurrentDoor->GetNextRoom();
+           
+            if (strcmp(myCurrentDoor->GetNextRoom().GetName(), myDoor0.GetNextRoom().GetName()) == 0)
+            {
+                //if door 0 next room is room 1 = my current room is that room
+                myCurrentDoor = &myDoors[1];
+            }
+            else if (strcmp(myCurrentDoor->GetNextRoom().GetName(), myDoor1.GetNextRoom().GetName()) == 0)
+            {
+                //if door 1 next room is room 2 = my current room is that room
+                myCurrentDoor = &myDoors[2];
+            }
+            else if (strcmp(myCurrentDoor->GetNextRoom().GetName(), myDoor2.GetNextRoom().GetName()) == 0)
+            {
+                //if door 2 next room is room 0 = my current room is that room
+                myCurrentDoor = &myDoors[0];
+            }
             if (myCurrentDoor->GetIsLocked() == true)
             {
                 myCurrentDoor->UnlockDoor(myPlayer);
@@ -179,21 +195,11 @@ void GameManager::ChooseDoor()
                     myCurrentDoor->UnlockDoor(myPlayer);
                 }
             }
-            if (strcmp(myCurrentDoor->GetNextRoom().GetName(), myDoor0.GetNextRoom().GetName()) == 0)
-            {
-                myCurrentDoor = &myDoors[1];
-            }
-            else if (strcmp(myCurrentDoor->GetNextRoom().GetName(), myDoor1.GetNextRoom().GetName()) == 0)
-            {
-                myCurrentDoor = &myDoors[2];
-            }
-            else if (strcmp(myCurrentDoor->GetNextRoom().GetName(), myDoor2.GetNextRoom().GetName()) == 0)
-            {
-                myCurrentDoor = &myDoors[0];
-            }
         }
+        // mty 
         else if (input == 2)
         {
+            
             myCurrentRoom = &myCurrentDoor->GetPrevRoom();
             if (myCurrentDoor->GetIsLocked() == true)
             {
@@ -201,14 +207,17 @@ void GameManager::ChooseDoor()
             }
             if (strcmp(myCurrentDoor->GetPrevRoom().GetName(), myDoor0.GetPrevRoom().GetName()) == 0)
             {
+                // if current door has prev room = door 0 prev name, my door is 2
                 myCurrentDoor = &myDoors[2];
             }
             else if (strcmp(myCurrentDoor->GetPrevRoom().GetName(), myDoor1.GetPrevRoom().GetName()) == 0)
             {
+                // if current door has prev room = door 1 prev name, my door is 0
                 myCurrentDoor = &myDoors[0];
             }
             else if (strcmp(myCurrentDoor->GetPrevRoom().GetName(), myDoor2.GetPrevRoom().GetName()) == 0)
             {
+                // if current door has prev room = door 2 prev name, my door is 1
                 myCurrentDoor = &myDoors[1];
             }
         }

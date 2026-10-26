@@ -110,9 +110,9 @@ void Player::RemoveSpell()
                     myCarryCap -= mySpellBook[i].GetSecondModifier();
                 }
             }
-            mySpellBook.clear();
-            myHasSpellActive  = false;
         }
+        mySpellBook.clear();
+        myHasSpellActive  = false;
     }
 
 void Player::PopulateInventory(Item& aItem)
