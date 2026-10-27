@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Diablo\\x64\\Debug\\Room.obj",
+            "outputs": [
+                "Diablo\\x64\\Debug\\Room.h.obj.dt.module.json",
+                "Diablo\\x64\\Debug\\Room.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

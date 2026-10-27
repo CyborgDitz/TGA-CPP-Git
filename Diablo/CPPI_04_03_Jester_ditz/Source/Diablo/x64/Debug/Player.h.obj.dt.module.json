@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Diablo\\x64\\Debug\\Player.obj",
+            "outputs": [
+                "Diablo\\x64\\Debug\\Player.h.obj.dt.module.json",
+                "Diablo\\x64\\Debug\\Player.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

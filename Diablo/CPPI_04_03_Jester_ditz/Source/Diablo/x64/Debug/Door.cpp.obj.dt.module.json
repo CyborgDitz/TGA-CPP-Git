@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Diablo\\x64\\Debug\\Door.obj",
+            "outputs": [
+                "Diablo\\x64\\Debug\\Door.cpp.obj.dt.module.json",
+                "Diablo\\x64\\Debug\\Door.cpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

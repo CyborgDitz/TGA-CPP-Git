@@ -14,24 +14,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Reusable Class Canvas/SetName Janky Temp.md",
+                "file": "2026-10-27.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SetName Janky Temp"
+              "title": "2026-10-27"
             }
           },
           {
-            "id": "fd4c8ea85cd825e0",
+            "id": "b6f6a9acefbb0c4e",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Uppgift 8 Bibliotek och timrr/Sammanfattning presentation.png"
+                "file": "Uppgift 7 Vector/FixedVector.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Sammanfattning presentation"
+              "icon": "lucide-file",
+              "title": "FixedVector"
             }
           }
         ],
@@ -156,8 +158,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "3e142f370520b6c4",
@@ -262,15 +263,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "fd4c8ea85cd825e0",
+  "active": "b6f6a9acefbb0c4e",
   "lastOpenFiles": [
+    "Uppgift 7 Vector",
+    "2026-10-27.md",
+    "Uppgift 7 Vector/FixedVector.md",
+    "Untitled.canvas",
+    "Reusable Class Canvas/SetName Janky Temp.md",
+    "Uppgift 8 Bibliotek och timrr/Sammanfattning presentation.png",
     "CPPI - 23 - (Mer detaljer) Eget bibliotek och Timer.pptx",
     "Uppgift 8 Bibliotek och timrr/CPPI - 23 - (Mer detaljer) Eget bibliotek och Timer.pptx",
     "Uppgift 8 Bibliotek och timrr/Uppgift 8.md",
-    "Uppgift 8 Bibliotek och timrr/Sammanfattning presentation.png",
     "Pasted image 20261020112839.png",
     "Uppgift 8 Bibliotek och timrr",
-    "Reusable Class Canvas/SetName Janky Temp.md",
     "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide.canvas",
     "Diablo/Pasted image 20261009091719.png",
     "Diablo/Pasted image 20261009091820.png",
@@ -282,7 +287,6 @@
     "Diablo/Diablo 4.1.3 Divide Reviewed.canvas",
     "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide Await review.canvas",
     "Diablo/decrepit Canvas/Enemy.canvas",
-    "Diablo/decrepit Canvas/Diablo4.1 backup.canvas",
     "Diablo/Diabllob.md",
     "Reusable Class Canvas",
     "Untitled.base",

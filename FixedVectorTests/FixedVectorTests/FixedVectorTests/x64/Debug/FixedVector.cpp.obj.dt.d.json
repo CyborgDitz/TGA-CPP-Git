@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\jester.ditz\\onedrive - academedia\\tgacppi26\\tga cpp git\\fixedvectortests\\fixedvectortests\\fixedvectortests\\fixedvector.cpp",
+        "ProvidedModule": "",
+        "Includes": [
+            "c:\\users\\jester.ditz\\onedrive - academedia\\tgacppi26\\tga cpp git\\fixedvectortests\\fixedvectortests\\fixedvectortests\\pch.h",
+            "c:\\users\\jester.ditz\\onedrive - academedia\\tgacppi26\\tga cpp git\\fixedvectortests\\fixedvectortests\\fixedvectortests\\fixedvector.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
