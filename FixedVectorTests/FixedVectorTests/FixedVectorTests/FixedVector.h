@@ -161,13 +161,26 @@ namespace CommonUtilities
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::insert(iterator aIterator, const Type& aObject)
 	{
-		myStorage[aIterator] = aObject;
+		assert(aIterator > &myStorage[0] && aIterator < &myStorage[mySize]);
+		mySize++;
+		for (int i = mySize;  i > 0; i--)
+		{
+			if (&myStorage[i] == aIterator)
+			{
+				*aIterator = aObject;
+				return;
+			}
+			myStorage[i] = myStorage[i-1];
+			
+		}
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::erase(iterator aIterator)
 	{
-		myStorage[aIterator]=
+		// assert aIterator > ?myStorage
+		myStorage[0];
+		
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
