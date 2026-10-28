@@ -6,7 +6,6 @@
       {
         "id": "02cd20338fc28594",
         "type": "tabs",
-        "dimension": 70.62999112688554,
         "children": [
           {
             "id": "0a54970f06217efe",
@@ -26,77 +25,21 @@
             "id": "b6f6a9acefbb0c4e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Uppgift 7 Vector/FixedVector.md",
-                "mode": "source",
-                "source": false
+                "file": "Uppgift 7 Vector/Untitled.canvas",
+                "viewState": {
+                  "x": -226.59723674632053,
+                  "y": 163.7068297790209,
+                  "zoom": -0.3333333333333333
+                }
               },
-              "icon": "lucide-file",
-              "title": "FixedVector"
+              "icon": "lucide-layout-dashboard",
+              "title": "Untitled"
             }
           }
         ],
         "currentTab": 1
-      },
-      {
-        "id": "75e31c6e63d63192",
-        "type": "tabs",
-        "dimension": 29.37000887311446,
-        "children": [
-          {
-            "id": "5297c4d8ea55e350",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide.canvas",
-                "viewState": {
-                  "x": -704.5,
-                  "y": 3013,
-                  "zoom": -3.0124754455051628
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "Diablo 4.2 Divide"
-            }
-          },
-          {
-            "id": "279b6c55fd381b98",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide 1.canvas",
-                "viewState": {
-                  "x": -684.5,
-                  "y": 2682.5,
-                  "zoom": -3.024490464280753
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "Diablo 4.2 Divide 1"
-            }
-          },
-          {
-            "id": "8e20edf5339fb542",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide.canvas",
-                "viewState": {
-                  "x": -704.5,
-                  "y": 3013,
-                  "zoom": -3.0124754455051628
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "Diablo 4.2 Divide"
-            }
-          }
-        ],
-        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -265,9 +208,12 @@
   },
   "active": "b6f6a9acefbb0c4e",
   "lastOpenFiles": [
+    "Uppgift 7 Vector/FixedVector.md",
+    "Uppgift 7 Vector/Untitled.canvas",
+    "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide.canvas",
+    "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide 1.canvas",
     "Uppgift 7 Vector",
     "2026-10-27.md",
-    "Uppgift 7 Vector/FixedVector.md",
     "Untitled.canvas",
     "Reusable Class Canvas/SetName Janky Temp.md",
     "Uppgift 8 Bibliotek och timrr/Sammanfattning presentation.png",
@@ -276,7 +222,6 @@
     "Uppgift 8 Bibliotek och timrr/Uppgift 8.md",
     "Pasted image 20261020112839.png",
     "Uppgift 8 Bibliotek och timrr",
-    "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide.canvas",
     "Diablo/Pasted image 20261009091719.png",
     "Diablo/Pasted image 20261009091820.png",
     "Diablo/Diablo 4.2.canvas",
@@ -285,8 +230,6 @@
     "Reusable Class Canvas/Enemy class.canvas",
     "Reusable Class Canvas/Combat Class 4.1.canvas",
     "Diablo/Diablo 4.1.3 Divide Reviewed.canvas",
-    "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide Await review.canvas",
-    "Diablo/decrepit Canvas/Enemy.canvas",
     "Diablo/Diabllob.md",
     "Reusable Class Canvas",
     "Untitled.base",

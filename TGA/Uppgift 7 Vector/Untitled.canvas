@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"9dcb3f17df40e47a","x":-760,"y":-300,"width":890,"height":510,"type":"group","label":"??"},
+		{"id":"51419f16334b8490","x":-740,"y":-92,"width":160,"height":75,"type":"text","text":"Data to store"},
+		{"id":"af6e14739bb6a01f","type":"text","text":"Man element to store","x":-560,"y":-92,"width":160,"height":90},
+		{"id":"0f53c5287d84901c","type":"text","text":"Data format to store in","x":-380,"y":-92,"width":185,"height":80},
+		{"id":"e0bacbcab809e832","x":-605,"y":-280,"width":250,"height":60,"type":"text","text":"FixedVector.h\n"},
+		{"id":"7ffa3a78fff2f885","x":-537,"y":90,"width":250,"height":100,"type":"text","text":"Assignment is to make Template to vector and array \nsomehow"},
+		{"id":"494b3b013d5e366c","type":"text","text":"FixedVectorTests.ccp\n","x":-140,"y":-250,"width":250,"height":55},
+		{"id":"786739c4ef5cc804","x":-140,"y":20,"width":250,"height":60,"type":"text","text":"How to test one at a time?"},
+		{"id":"561e744781df5a27","x":-537,"y":280,"width":250,"height":60,"type":"text","text":"Reference with CCP.com vectors "},
+		{"id":"1c358c079b694c0f","x":-37,"y":380,"width":250,"height":60,"type":"text","text":"Remove Inline fills"},
+		{"id":"3297aa6a34f0bded","x":-287,"y":280,"width":250,"height":70,"type":"text","text":"avoid auto generate for template\nkeep func in suggested Header file"}
+	],
+	"edges":[
+		{"id":"b10223f36c5ddebb","fromNode":"e0bacbcab809e832","fromSide":"bottom","toNode":"51419f16334b8490","toSide":"top"},
+		{"id":"00645f536daba757","fromNode":"e0bacbcab809e832","fromSide":"bottom","toNode":"af6e14739bb6a01f","toSide":"top"},
+		{"id":"de5aed7f8d0d1787","fromNode":"e0bacbcab809e832","fromSide":"bottom","toNode":"0f53c5287d84901c","toSide":"top"},
+		{"id":"691a2e9b95f0299b","fromNode":"494b3b013d5e366c","fromSide":"bottom","toNode":"786739c4ef5cc804","toSide":"top"}
+	]
+}
