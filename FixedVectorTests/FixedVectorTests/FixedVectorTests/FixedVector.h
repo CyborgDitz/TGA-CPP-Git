@@ -257,27 +257,41 @@ namespace CommonUtilities
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::resize(SizeType newSize, const Type& value)
 	{
-		//TODO redo
-		int i = 0;
+		
+		for (int i = mySize; i < newSize; i--)
+		{
+			
+		}
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	bool CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::empty() const
 	{
-		return true;
+		assert(mySize == 0);
+		if(mySize == 0)
+		{
+			return true;
+		}
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	SizeType CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::size() const
 	{
+		assert(mySize);
 		return mySize;
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	SizeType CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::capacity() const
 	{
-		(mySize > 0);
+		assert(mySize > 0);
 		return CAPACITY;
+		/*int a {};
+		for (int i =0 ; i < mysize; i++)
+		{
+			a++;
+		}
+		return i;*/
 	}
 }
 
