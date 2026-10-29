@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0a54970f06217efe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2026-10-27.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026-10-27"
-            }
-          },
-          {
             "id": "b6f6a9acefbb0c4e",
             "type": "leaf",
             "state": {
@@ -29,17 +15,16 @@
               "state": {
                 "file": "Uppgift 7 Vector/Untitled.canvas",
                 "viewState": {
-                  "x": -226.59723674632053,
-                  "y": 163.7068297790209,
-                  "zoom": -0.3333333333333333
+                  "x": -244.40108702506615,
+                  "y": 1361.5023083527244,
+                  "zoom": -0.6666666666666666
                 }
               },
               "icon": "lucide-layout-dashboard",
               "title": "Untitled"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,8 +81,23 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
+          },
+          {
+            "id": "0a54970f06217efe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2026-10-27.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-10-27"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -208,12 +208,13 @@
   },
   "active": "b6f6a9acefbb0c4e",
   "lastOpenFiles": [
-    "Uppgift 7 Vector/FixedVector.md",
+    "2026-10-27.md",
     "Uppgift 7 Vector/Untitled.canvas",
+    "Pasted image 20261029103202.png",
+    "Uppgift 7 Vector/FixedVector.md",
     "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide.canvas",
     "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide 1.canvas",
     "Uppgift 7 Vector",
-    "2026-10-27.md",
     "Untitled.canvas",
     "Reusable Class Canvas/SetName Janky Temp.md",
     "Uppgift 8 Bibliotek och timrr/Sammanfattning presentation.png",

@@ -112,7 +112,7 @@ namespace CommonUtilities
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::back()
 	{
-		(mySize > 0);
+		assert(mySize > 0);
 		return myStorage[mySize];
 	}
 
@@ -126,7 +126,7 @@ namespace CommonUtilities
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::at(SizeType aIndex)
 	{
-		(aIndex < mySize && aIndex >= 0);
+		assert(aIndex < CAPACITY);
 		return myStorage[aIndex];
 	}
 
@@ -154,8 +154,9 @@ namespace CommonUtilities
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::push_back(const Type& aObject)
 	{
+	//	assert(mySize < CAPACITY);
 		myStorage[mySize] = aObject;
-		mySize++;
+		++mySize;
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
@@ -218,26 +219,26 @@ namespace CommonUtilities
 	typename CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::iterator CommonUtilities::FixedVector<Type, CAPACITY,
 		SizeType>::end()
 	{
-		(mySize > 0);
-		return myStorage;
+
+		assert(mySize > 0);
+		return myStorage[mySize - 1];
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	typename CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::const_iterator CommonUtilities::FixedVector<Type,
 		CAPACITY, SizeType>::end() const
 	{
-		//TODO redo
-		(mySize > 0);
-		return myStorage;
+		assert(mySize > 0);
+		return myStorage[mySize - 1];
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	typename CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::const_iterator CommonUtilities::FixedVector<Type,
 		CAPACITY, SizeType>::cend() const
 	{
-		//TODO redo
-		(mySize > 0);
-		return myStorage;
+		const int constSize = mySize - 1
+			assert(mySize > 0);
+		return myStorage[constSize];
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
@@ -252,22 +253,23 @@ namespace CommonUtilities
 	{
 		//TODO redo
 		mySize = newSize;
+		 ++mySize;
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::resize(SizeType newSize, const Type& value)
 	{
 		
-		for (int i = mySize; i < newSize; i--)
+		/*for (int i = mySize; i < newSize; i--)
 		{
 			
-		}
+		}*/
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	bool CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::empty() const
 	{
-		assert(mySize == 0);
+		assert(mySize != 0);
 		if(mySize == 0)
 		{
 			return true;

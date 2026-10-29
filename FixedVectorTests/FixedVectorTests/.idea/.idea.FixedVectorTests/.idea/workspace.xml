@@ -10,16 +10,7 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3b9666d-b5ee-4c19-90f5-78fc42bbda19" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FixedVectorTests/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FixedVectorTests/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FixedVectorTests/FixedVector.h" beforeDir="false" afterPath="$PROJECT_DIR$/FixedVectorTests/FixedVector.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FixedVectorTests/x64/Debug/FixedVectorTests.obj" beforeDir="false" afterPath="$PROJECT_DIR$/FixedVectorTests/x64/Debug/FixedVectorTests.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FixedVectorTests/x64/Debug/FixedVectorTests.pch" beforeDir="false" afterPath="$PROJECT_DIR$/FixedVectorTests/x64/Debug/FixedVectorTests.pch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FixedVectorTests/x64/Debug/pch.obj" beforeDir="false" afterPath="$PROJECT_DIR$/FixedVectorTests/x64/Debug/pch.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FixedVectorTests/x64/Debug/vc145.idb" beforeDir="false" afterPath="$PROJECT_DIR$/FixedVectorTests/x64/Debug/vc145.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FixedVectorTests/x64/Debug/vc145.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FixedVectorTests/x64/Debug/vc145.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/FixedVectorTests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/FixedVectorTests.pdb" afterDir="false" />
-    </list>
+    <list default="true" id="f3b9666d-b5ee-4c19-90f5-78fc42bbda19" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
