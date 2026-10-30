@@ -56,7 +56,7 @@ namespace CommonUtilities
 
 	private:
 		SizeType mySize = 0;
-
+		bool myIsAsserted = false;
 		Type myStorage[CAPACITY]; //<- for G
 		//alignas(Type) char myStorage[sizeof(Type) * CAPACITY]; // <- needed for VG
 	};
@@ -76,6 +76,7 @@ namespace CommonUtilities
 		{
 			myStorage[i] = aFixedVector[i];
 		}
+		 *this = aFixedVector;
 	}
 	template<typename Type, unsigned int CAPACITY, typename SizeType>
 
@@ -85,9 +86,11 @@ namespace CommonUtilities
 	CommonUtilities::FixedVector<Type, CAPACITY, SizeType>& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::operator
 		=(const FixedVector& aFixedVector)
 	{
+		
 		if (this != &aFixedVector)
 		{
-			for (SizeType i = 0; i < CAPACITY; i++)
+			mySize = CAPACITY;
+			for (SizeType i = 0; i < mySize; i++)
 			{
 				myStorage[i] = aFixedVector[i];
 			}
@@ -98,76 +101,126 @@ namespace CommonUtilities
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::front()
 	{
-		assert(mySize > 0);
+		myIsAsserted = (mySize > 0);
+	
+		if (!myIsAsserted)
+		{
+			throw "Front failed";
+		}
+		assert(myIsAsserted);
 		return myStorage[0];
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	const Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::front() const
 	{
-		assert(mySize >= 0);
+		myIsAsserted = (mySize >= 0);
+		if (!myIsAsserted)
+		{
+			throw "Front failed";
+		}
+		assert(myIsAsserted);
 		return  myStorage[0];
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::back()
 	{
-		assert(mySize > 0);
-		return myStorage[mySize];
+		myIsAsserted = (mySize > 0);
+	
+		if (!myIsAsserted)
+		{
+			throw "Back Failed";
+		}
+		assert(myIsAsserted);
+	
+		return myStorage[mySize-1];
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	const Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::back() const
 	{
-		(mySize > 0);
-		return myStorage[mySize];
+		myIsAsserted = (mySize > 0);
+		if (!myIsAsserted)
+		{
+			throw "Back Failed";
+		}
+		assert(myIsAsserted);
+
+		return myStorage[mySize - 1];
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::at(SizeType aIndex)
 	{
-		assert(aIndex < CAPACITY);
+		myIsAsserted = (aIndex < CAPACITY);
+		if (!myIsAsserted)
+		{
+			throw "At Failed";
+		}
+		assert(myIsAsserted);
 		return myStorage[aIndex];
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	const Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::at(SizeType aIndex) const
 	{
-		(aIndex < mySize && aIndex >= 0);
+		myIsAsserted = (aIndex < mySize && aIndex >= 0);
+
+		if (!myIsAsserted)
+		{
+			throw "At failed";
+		}
+		assert(myIsAsserted);
 		return myStorage[aIndex];
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	const Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::operator[](SizeType aIndex) const
 	{
-		(aIndex < mySize && aIndex >= 0);
+	
 		return myStorage[aIndex];
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::operator[](SizeType aIndex)
 	{
-		(aIndex < mySize && aIndex >= 0);
+		myIsAsserted = (aIndex < mySize && aIndex >= 0);
+
+		if (!myIsAsserted)
+		{
+		 throw "Operator failed";
+		}
+		assert(myIsAsserted);
+
 		return myStorage[aIndex];
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::push_back(const Type& aObject)
 	{
-		assert(mySize < CAPACITY);
-
-		while (mySize <CAPACITY)
+		myIsAsserted = (mySize < CAPACITY);
+		if (mySize >= CAPACITY)
 		{
-			myStorage[mySize] = aObject;
-			mySize++;
+			throw "PushBack failed";
 		}
+		assert(myIsAsserted);
+	
+		myStorage[mySize] = aObject;
+		mySize++;
 
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::insert(iterator aIterator, const Type& aObject)
 	{
-		assert(mySize < CAPACITY && aIterator >= &myStorage[0] && aIterator <= &myStorage[mySize]);
+		myIsAsserted= (mySize < CAPACITY && aIterator >= &myStorage[0] && aIterator <= &myStorage[mySize]);
+		
+		if (!myIsAsserted)
+		{
+			throw "Insert failed";
+		}
+		assert(myIsAsserted);
 		if (mySize == 0)
 		{
 			push_back(aObject);
@@ -185,30 +238,34 @@ namespace CommonUtilities
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::erase(iterator aIterator)
 	{
-		assert(empty() == false && aIterator >= begin() && aIterator <= end());
+		myIsAsserted = (mySize >0  && aIterator >= &myStorage[0] && aIterator < &myStorage[mySize]);
+		if (!myIsAsserted)
+		{
+			throw "Erase failed";
+		}
+		assert(myIsAsserted);
 
-		for (iterator i = aIterator; i < end(); i++)
+		for (iterator i = aIterator; i < end()-1; i++)
 		{
 
 			*i = *(i + 1);
 		}
 
-		--mySize;
+		pop_back();
 
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::pop_back()
 	{
-		(mySize < CAPACITY);
-		mySize = 0;
+
+		--mySize;
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	typename CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::iterator CommonUtilities::FixedVector<Type, CAPACITY,
 		SizeType>::begin()
 	{
-
 		return &myStorage[0];
 	}
 
@@ -258,6 +315,10 @@ namespace CommonUtilities
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::resize(SizeType newSize)
 	{
+		if (newSize > CAPACITY)
+		{
+			throw "resize failed";
+		}
 		assert(newSize < CAPACITY);
 		mySize = newSize;
 
@@ -266,7 +327,10 @@ namespace CommonUtilities
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::resize(SizeType newSize, const Type& value)
 	{
-
+		if (newSize > CAPACITY)
+		{
+			throw "resize failed";
+		}
 		assert(newSize < CAPACITY);
 
 		SizeType a = mySize;
@@ -301,5 +365,7 @@ namespace CommonUtilities
 		return CAPACITY;
 
 	}
+
+
 }
 

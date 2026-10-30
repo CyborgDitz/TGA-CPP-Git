@@ -1,7 +1,7 @@
+#include <cassert>
 #include "pch.h"
 #include "CppUnitTest.h"
 
-#include <cassert>
 #include <unordered_map>
 
 // Hack to cause assert to throw exceptions
@@ -12,7 +12,7 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-//#define ENABLE_VG_TESTS
+#define ENABLE_VG_TESTS
 
 using namespace CommonUtilities;
 
