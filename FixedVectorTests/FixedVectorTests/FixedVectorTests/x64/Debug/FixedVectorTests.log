@@ -1,10 +1,3 @@
 ﻿  pch.cpp
-C:\Users\Jester.ditz\OneDrive - Academedia\TGACPPI26\TGA CPP Git\FixedVectorTests\FixedVectorTests\FixedVectorTests\FixedVector.h(232,33): error C2187: syntax error: ']' was unexpected here
-  (compiling source file 'pch.cpp')
-  
-C:\Users\Jester.ditz\OneDrive - Academedia\TGACPPI26\TGA CPP Git\FixedVectorTests\FixedVectorTests\FixedVectorTests\FixedVector.h(232,33): error C2760: syntax error: ']' was unexpected here; expected ';'
-  (compiling source file 'pch.cpp')
-  
-C:\Users\Jester.ditz\OneDrive - Academedia\TGACPPI26\TGA CPP Git\FixedVectorTests\FixedVectorTests\FixedVectorTests\FixedVector.h(232,33): error C3878: syntax error: unexpected token ']' following 'jump-statement'
-  (compiling source file 'pch.cpp')
-  
+  FixedVectorTests.cpp
+  FixedVectorTests.vcxproj -> C:\Users\Jester.ditz\OneDrive - Academedia\TGACPPI26\TGA CPP Git\FixedVectorTests\FixedVectorTests\x64\Debug\FixedVectorTests.dll
