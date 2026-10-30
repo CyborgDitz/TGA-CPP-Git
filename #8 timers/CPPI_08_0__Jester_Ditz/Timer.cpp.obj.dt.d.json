@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\jester.ditz\\onedrive - academedia\\tgacppi26\\tga cpp git\\#8 timers\\cppi_08_0__jester_ditz\\timer.cpp",
+        "ProvidedModule": "",
+        "Includes": [
+            "c:\\users\\jester.ditz\\onedrive - academedia\\tgacppi26\\tga cpp git\\#8 timers\\cppi_08_0__jester_ditz\\pch.h",
+            "c:\\users\\jester.ditz\\onedrive - academedia\\tgacppi26\\tga cpp git\\#8 timers\\cppi_08_0__jester_ditz\\framework.h",
+            "c:\\users\\jester.ditz\\onedrive - academedia\\tgacppi26\\tga cpp git\\#8 timers\\cppi_08_0__jester_ditz\\timer.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
