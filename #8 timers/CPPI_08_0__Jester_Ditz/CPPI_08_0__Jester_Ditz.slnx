@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Timer.vcxproj" />
+  <Project Path="CPPI_08_0__Jester_Ditz.vcxproj" />
 </Solution>

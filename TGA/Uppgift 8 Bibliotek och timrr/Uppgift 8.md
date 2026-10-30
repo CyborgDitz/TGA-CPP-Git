@@ -1,1 +1,0 @@
-![[Sammanfattning presentation.png]]
