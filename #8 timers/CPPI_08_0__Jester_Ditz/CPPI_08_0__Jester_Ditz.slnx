@@ -1,7 +1,9 @@
 <Solution>
   <Configurations>
+    <BuildType Name="CommonTest" />
+    <BuildType Name="Debug" />
+    <BuildType Name="Release" />
     <Platform Name="x64" />
-    <Platform Name="x86" />
   </Configurations>
-  <Project Path="CPPI_08_0__Jester_Ditz.vcxproj" />
+  <Project Path="CPPI_08_0__Jester_Ditz.vcxproj" Id="fd6533cf-c5b0-466f-bbbb-64cfef40478b" />
 </Solution>
