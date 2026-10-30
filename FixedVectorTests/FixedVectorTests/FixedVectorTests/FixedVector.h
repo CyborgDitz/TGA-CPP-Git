@@ -76,7 +76,7 @@ namespace CommonUtilities
 		{
 			myStorage[i] = aFixedVector[i];
 		}
-		 *this = aFixedVector;
+		*this = aFixedVector;
 	}
 	template<typename Type, unsigned int CAPACITY, typename SizeType>
 
@@ -86,7 +86,7 @@ namespace CommonUtilities
 	CommonUtilities::FixedVector<Type, CAPACITY, SizeType>& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::operator
 		=(const FixedVector& aFixedVector)
 	{
-		
+
 		if (this != &aFixedVector)
 		{
 			mySize = CAPACITY;
@@ -102,7 +102,7 @@ namespace CommonUtilities
 	Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::front()
 	{
 		myIsAsserted = (mySize > 0);
-	
+
 		if (!myIsAsserted)
 		{
 			throw "Front failed";
@@ -127,14 +127,14 @@ namespace CommonUtilities
 	Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::back()
 	{
 		myIsAsserted = (mySize > 0);
-	
+
 		if (!myIsAsserted)
 		{
 			throw "Back Failed";
 		}
 		assert(myIsAsserted);
-	
-		return myStorage[mySize-1];
+
+		return myStorage[mySize - 1];
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
@@ -178,7 +178,7 @@ namespace CommonUtilities
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	const Type& CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::operator[](SizeType aIndex) const
 	{
-	
+
 		return myStorage[aIndex];
 	}
 
@@ -189,7 +189,7 @@ namespace CommonUtilities
 
 		if (!myIsAsserted)
 		{
-		 throw "Operator failed";
+			throw "Operator failed";
 		}
 		assert(myIsAsserted);
 
@@ -205,7 +205,7 @@ namespace CommonUtilities
 			throw "PushBack failed";
 		}
 		assert(myIsAsserted);
-	
+
 		myStorage[mySize] = aObject;
 		mySize++;
 
@@ -214,8 +214,8 @@ namespace CommonUtilities
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::insert(iterator aIterator, const Type& aObject)
 	{
-		myIsAsserted= (mySize < CAPACITY && aIterator >= &myStorage[0] && aIterator <= &myStorage[mySize]);
-		
+		myIsAsserted = (mySize < CAPACITY && aIterator >= &myStorage[0] && aIterator <= &myStorage[mySize]);
+
 		if (!myIsAsserted)
 		{
 			throw "Insert failed";
@@ -238,14 +238,14 @@ namespace CommonUtilities
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	void CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::erase(iterator aIterator)
 	{
-		myIsAsserted = (mySize >0  && aIterator >= &myStorage[0] && aIterator < &myStorage[mySize]);
+		myIsAsserted = (mySize > 0 && aIterator >= &myStorage[0] && aIterator < &myStorage[mySize]);
 		if (!myIsAsserted)
 		{
 			throw "Erase failed";
 		}
 		assert(myIsAsserted);
 
-		for (iterator i = aIterator; i < end()-1; i++)
+		for (iterator i = aIterator; i < end() - 1; i++)
 		{
 
 			*i = *(i + 1);
@@ -354,18 +354,14 @@ namespace CommonUtilities
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	SizeType CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::size() const
 	{
-
 		return mySize;
 	}
 
 	template <typename Type, unsigned int CAPACITY, typename SizeType>
 	SizeType CommonUtilities::FixedVector<Type, CAPACITY, SizeType>::capacity() const
 	{
-
 		return CAPACITY;
-
 	}
-
 
 }
 
