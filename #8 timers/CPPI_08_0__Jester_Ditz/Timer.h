@@ -1,6 +1,5 @@
 #pragma once
-#include <cstdint>
-#include <chrono>
+#include "pch.h"
 namespace CommonUtilities
 {
 	class Timer
@@ -21,7 +20,7 @@ namespace CommonUtilities
 			std::chrono::high_resolution_clock::time_point myTitty2 = std::chrono::high_resolution_clock::now();
 			//it took me timespanofAssFuck get herwe;
 			float myDeltaTime{};
-			double myTotalTime{};  
+			double myTotalTime;
 			int myFixedRateTickDeltaCount{};
 			uint64_t myFixedRateTickCount{};
 	};

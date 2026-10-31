@@ -20,10 +20,10 @@ float CommonUtilities::Timer::GetDeltaTime() const
 }
 
 double CommonUtilities::Timer::GetTotalTime() const
-{	std::chrono::high_resolution_clock::time_point timemyTotalTime = std::chrono::high_resolution_clock::now();
+{	std::chrono::high_resolution_clock::time_point myTotalTime = std::chrono::high_resolution_clock::now();
 	//std::chrono::duration<double> myTotalTime = std::chrono::duration_cast<std::chrono::duration<double>>(myTitty2 - myTitty1);
-	std::chrono::duration<double> myTotalTime =  std::chrono::duration<double>(myTotalTime);
-	return myTotalTime;
+	//std::chrono::duration<double> myTotalTime =  std::chrono::duration<double>(myTotalTime);
+return std::chrono::time_point_cast<double>(myTitty1);
 }
 
 int CommonUtilities::Timer::GetFixedRateTickDeltaCount() const
