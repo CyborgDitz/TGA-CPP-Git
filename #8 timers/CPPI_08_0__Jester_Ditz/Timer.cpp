@@ -1,38 +1,45 @@
 #include "pch.cpp"
-
+#include "Timer.h"
+#include "framework.h"
 ///IDE Configs
 //find h files
 // set library folders to use
 // use h files only when selected
 // find dlls
 
+CommonUtilities::Timer::Timer(float aFixedTickTime) : myClockTime(std::chrono::high_resolution_clock())
+{
+	
+	myFixedTickTime = aFixedTickTime;
+}
+
 void CommonUtilities::Timer::Update()
 {
-	//run once per frame only, runs first
+	myDeltaTime = myClockTime.now();
 }
 
 float CommonUtilities::Timer::GetDeltaTime() const
 {
 	//time/frames
-	//  use GetTotalTime() last frame, and this frame and minus
-	return 0.0f;
+	//  use GetTotalTime() last frame, and this frame and minus delta time
+	return std::chrono::duration<float>(myClockTime.now() - myDeltaTime).count();
 
 }
 
 double CommonUtilities::Timer::GetTotalTime() const
-{	std::chrono::high_resolution_clock::time_point myTotalTime = std::chrono::high_resolution_clock::now();
-	//std::chrono::duration<double> myTotalTime = std::chrono::duration_cast<std::chrono::duration<double>>(myTitty2 - myTitty1);
-	//std::chrono::duration<double> myTotalTime =  std::chrono::duration<double>(myTotalTime);
-return std::chrono::time_point_cast<double>(myTitty1);
+{	std::chrono::high_resolution_clock::time_point myTotalTimemyTotalTime = myClockTime.now();
+	
+return std::chrono::duration(myClockTime.now() - myTimeNow).count();
 }
 
 int CommonUtilities::Timer::GetFixedRateTickDeltaCount() const
 {
 	//use titty1 or tity2?
-	return 0;
+	return static_cast<uint64_t>(GetDeltaTime() - myFixedTickTime);
 }
 
 uint64_t CommonUtilities::Timer::GetFixedRateTickCount() const
 {
-	return 0;
+	return static_cast<uint64_t>(GetTotalTime() - myFixedTickTime);
 }
+

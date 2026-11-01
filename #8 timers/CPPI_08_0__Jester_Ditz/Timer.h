@@ -15,11 +15,11 @@ namespace CommonUtilities
 		uint64_t GetFixedRateTickCount() const;
 
 		private:
-			std::chrono::high_resolution_clock::time_point myTitty1 = std::chrono::high_resolution_clock::now();
+			std::chrono::high_resolution_clock myClockTime;
 			//call t1, do stuff between, call t2, t2 -1 = timespanofAssFuck
-			std::chrono::high_resolution_clock::time_point myTitty2 = std::chrono::high_resolution_clock::now();
-			//it took me timespanofAssFuck get herwe;
-			float myDeltaTime{};
+			const std::chrono::high_resolution_clock::time_point myTimeNow;
+			const std::chrono::high_resolution_clock::time_point myDeltaTime;
+			
 			double myTotalTime;
 			int myFixedRateTickDeltaCount{};
 			uint64_t myFixedRateTickCount{};
