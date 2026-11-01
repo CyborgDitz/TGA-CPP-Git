@@ -1,4 +1,5 @@
 #include "pch.cpp"
+#include "pch.h"
 #include "Timer.h"
 #include "framework.h"
 ///IDE Configs
@@ -9,7 +10,7 @@
 
 CommonUtilities::Timer::Timer(float aFixedTickTime) : myClockTime(std::chrono::high_resolution_clock())
 {
-	
+
 	myFixedTickTime = aFixedTickTime;
 }
 
@@ -27,22 +28,22 @@ float CommonUtilities::Timer::GetDeltaTime() const
 }
 
 double CommonUtilities::Timer::GetTotalTime() const
-{	std::chrono::high_resolution_clock::time_point myTotalTimemyTotalTime = myClockTime.now();
-	
-return std::chrono::duration(myClockTime.now() - myTimeNow).count();
+{
+
+	return std::chrono::duration<double>(myClockTime.now() - myTimeNow).count();
 }
 
 int CommonUtilities::Timer::GetFixedRateTickDeltaCount() const
 {
 
-	return static_cast<uint64_t>(GetDeltaTime() - myFixedTickTime);
+	return static_cast<int>(GetDeltaTime() - myFixedTickTime);
 
 }
 
 uint64_t CommonUtilities::Timer::GetFixedRateTickCount() const
 {
 	return static_cast<uint64_t>(GetTotalTime() - myFixedTickTime);
-	
+
 }
 
 

@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "C:\\TGA-CPP-Git\\#8 timers\\CPPI_08_0__Jester_Ditz\\Timer\\Intermediates\\Timer.obj",
+            "outputs": [
+                "C:\\TGA-CPP-Git\\#8 timers\\CPPI_08_0__Jester_Ditz\\Timer\\Intermediates\\Timer.cpp.obj.dt.module.json",
+                "C:\\TGA-CPP-Git\\#8 timers\\CPPI_08_0__Jester_Ditz\\Timer\\Intermediates\\Timer.cpp.obj.dt.d.json",
+                "C:\\TGA-CPP-Git\\#8 timers\\CPPI_08_0__Jester_Ditz\\\\Timer\\Intermediates\\CPPI_08_0__Jester_Ditz\\debug\\.pch"
+            ],
+            "requires": []
+        }
+    ]
+}

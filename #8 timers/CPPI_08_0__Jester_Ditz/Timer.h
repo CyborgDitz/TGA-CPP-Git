@@ -21,7 +21,7 @@ namespace CommonUtilities
 			 std::chrono::high_resolution_clock::time_point myDeltaTime;
 			
 		
-			 uint64_t myFixedTickTime;
+			float myFixedTickTime;
 	};
 	// std chrono clock Returns the current time_point in the frame of the high_resolution_clock.
 }
