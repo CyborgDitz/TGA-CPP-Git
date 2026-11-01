@@ -34,12 +34,15 @@ return std::chrono::duration(myClockTime.now() - myTimeNow).count();
 
 int CommonUtilities::Timer::GetFixedRateTickDeltaCount() const
 {
-	//use titty1 or tity2?
+
 	return static_cast<uint64_t>(GetDeltaTime() - myFixedTickTime);
+
 }
 
 uint64_t CommonUtilities::Timer::GetFixedRateTickCount() const
 {
 	return static_cast<uint64_t>(GetTotalTime() - myFixedTickTime);
+	
 }
+
 
