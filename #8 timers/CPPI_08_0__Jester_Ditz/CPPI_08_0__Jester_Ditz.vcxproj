@@ -52,17 +52,17 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)\Timer\Lib\</OutDir>
-    <IntDir>$(SolutionDir)\Timer\Indermediate\</IntDir>
+    <IntDir>$(SolutionDir)\Timer\Intermediates\</IntDir>
     <TargetName>$(ProjectName)\debug\</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)\Timer\Lib\</OutDir>
-    <IntDir>$(SolutionDir)\Timer\Lib\</IntDir>
+    <IntDir>$(SolutionDir)\Timer\Intermediates\</IntDir>
     <TargetName>$(ProjectName)\release\</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CommonTest|x64'">
     <OutDir>$(SolutionDir)\Timer\Lib\</OutDir>
-    <IntDir>$(SolutionDir)\Timer\Lib\</IntDir>
+    <IntDir>$(SolutionDir)\Timer\Intermediates\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
