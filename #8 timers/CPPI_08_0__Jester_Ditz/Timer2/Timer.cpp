@@ -8,11 +8,11 @@ int main()
 
 	using namespace CommonUtilities;
 	Timer timer;
-	for (int i = 0; i < 10; i++)
+	while(true)
 	{
 		timer.Update();
 		
-		Sleep(10);
+		Sleep(100);
 
 		std::cout << "The DeltaTime: " << timer.GetDeltaTime() << std::endl; 
 		std::cout << "The Time Total  " << timer.GetTotalTime() << std::endl;
