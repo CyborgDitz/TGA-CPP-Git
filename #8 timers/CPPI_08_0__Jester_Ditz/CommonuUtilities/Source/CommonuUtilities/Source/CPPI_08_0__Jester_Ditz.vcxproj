@@ -51,18 +51,21 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)\Timer\Lib\</OutDir>
-    <IntDir>$(SolutionDir)\Timer\Intermediates\</IntDir>
+    <OutDir>$(SolutionDir)\CommonuUtilities\Lib\</OutDir>
+    <IntDir>$(SolutionDir)\CommonuUtilities\Lib\</IntDir>
     <TargetName>$(ProjectName)\debug\</TargetName>
+    <IncludePath>$(SolutionDir)\Include\</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)\Timer\Lib\</OutDir>
-    <IntDir>$(SolutionDir)\Timer\Intermediates\</IntDir>
+    <OutDir>$(SolutionDir)\CommonuUtilities\Lib\</OutDir>
+    <IntDir>$(SolutionDir)\CommonuUtilities\Lib\</IntDir>
     <TargetName>$(ProjectName)\release\</TargetName>
+    <IncludePath>$(SolutionDir)\Include\</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CommonTest|x64'">
-    <OutDir>$(SolutionDir)\Timer\Lib\</OutDir>
-    <IntDir>$(SolutionDir)\Timer\Intermediates\</IntDir>
+    <OutDir>$(SolutionDir)\CommonuUtilities\Lib\</OutDir>
+    <IntDir>$(SolutionDir)\CommonuUtilities\Lib\</IntDir>
+    <IncludePath>$(SolutionDir)\Include\</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -108,6 +111,16 @@
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='CommonTest|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='CommonTest|x64'">
+    <ClCompile>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />

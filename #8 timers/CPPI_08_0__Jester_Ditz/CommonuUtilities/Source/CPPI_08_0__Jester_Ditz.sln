@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12224.181 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPPI_08_0__Jester_Ditz", "CPPI_08_0__Jester_Ditz.vcxproj", "{FD6533CF-C5B0-466F-BBBB-64CFEF40478B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CommonTest|x64 = CommonTest|x64
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD6533CF-C5B0-466F-BBBB-64CFEF40478B}.CommonTest|x64.ActiveCfg = CommonTest|x64
+		{FD6533CF-C5B0-466F-BBBB-64CFEF40478B}.CommonTest|x64.Build.0 = CommonTest|x64
+		{FD6533CF-C5B0-466F-BBBB-64CFEF40478B}.Debug|x64.ActiveCfg = Debug|x64
+		{FD6533CF-C5B0-466F-BBBB-64CFEF40478B}.Debug|x64.Build.0 = Debug|x64
+		{FD6533CF-C5B0-466F-BBBB-64CFEF40478B}.Release|x64.ActiveCfg = Release|x64
+		{FD6533CF-C5B0-466F-BBBB-64CFEF40478B}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {769E6970-8603-4036-A828-C77D2E68A9CB}
+	EndGlobalSection
+EndGlobal
