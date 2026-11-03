@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Timer2.vcxproj" Id="1922f365-3c3e-46db-a509-b3aebe9bb140" />
+</Solution>
