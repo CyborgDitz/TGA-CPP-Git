@@ -1,0 +1,22 @@
+{
+	"nodes":[
+		{"id":"5769e6aa078a6794","x":-220,"y":-760,"width":960,"height":400,"color":"1","type":"group","label":"Sprite Data"},
+		{"id":"e088d66ad481ded1","x":-170,"y":-260,"width":660,"height":360,"type":"group","label":"my SpriteObject"},
+		{"id":"a889b7d669e8876e","type":"text","text":"vector2f direction = x, y;","x":-200,"y":-500,"width":175,"height":60,"color":"6"},
+		{"id":"54f5731f83827064","type":"text","text":"float = speed","x":-5,"y":-500,"width":140,"height":60,"color":"6"},
+		{"id":"def9809dec1b2c25","type":"text","text":"struct SpriteObject","x":75,"y":-720,"width":250,"height":60,"color":"6"},
+		{"id":"63b14c975e28cba5","x":160,"y":-500,"width":250,"height":60,"type":"text","text":"sprite2dInstnaceData"},
+		{"id":"43e1aa4f3fe19d10","x":450,"y":-500,"width":250,"height":60,"color":"6","type":"text","text":"sharedData"},
+		{"id":"41bd6c11579cd0a0","x":800,"y":-580,"width":250,"height":50,"color":"5","type":"text","text":"-> Grapphics stuff"},
+		{"id":"d518f5246c478f00","type":"text","text":"struct Ball ","x":-115,"y":-150,"width":250,"height":50,"color":"4"},
+		{"id":"88692e0c1cd3df0c","type":"text","text":"struct Paddle","x":200,"y":-150,"width":250,"height":50,"color":"4"}
+	],
+	"edges":[
+		{"id":"513c6153ee6c51dd","fromNode":"def9809dec1b2c25","fromSide":"bottom","toNode":"a889b7d669e8876e","toSide":"top"},
+		{"id":"2803cd3e2b2fbc8f","fromNode":"def9809dec1b2c25","fromSide":"bottom","toNode":"54f5731f83827064","toSide":"top"},
+		{"id":"6c8cf6bd6fa4b8ff","fromNode":"def9809dec1b2c25","fromSide":"bottom","toNode":"43e1aa4f3fe19d10","toSide":"top"},
+		{"id":"bbb5d486293334c0","fromNode":"43e1aa4f3fe19d10","fromSide":"right","toNode":"41bd6c11579cd0a0","toSide":"left"},
+		{"id":"940c013224a62a98","fromNode":"def9809dec1b2c25","fromSide":"bottom","toNode":"63b14c975e28cba5","toSide":"top"},
+		{"id":"c6631c360fc73fc2","fromNode":"5769e6aa078a6794","fromSide":"bottom","toNode":"e088d66ad481ded1","toSide":"top"}
+	]
+}

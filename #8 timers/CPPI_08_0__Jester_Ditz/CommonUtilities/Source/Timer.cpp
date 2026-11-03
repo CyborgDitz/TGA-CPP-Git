@@ -1,6 +1,5 @@
-
 #include "Timer.h"
-#include "framework.h"
+
 ///IDE Configs
 //find h files
 // set library folders to use
