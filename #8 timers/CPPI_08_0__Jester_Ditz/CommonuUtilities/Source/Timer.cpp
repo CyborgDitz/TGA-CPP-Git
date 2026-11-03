@@ -1,5 +1,4 @@
-#include "pch.cpp"
-#include "pch.h"
+
 #include "Timer.h"
 #include "framework.h"
 ///IDE Configs

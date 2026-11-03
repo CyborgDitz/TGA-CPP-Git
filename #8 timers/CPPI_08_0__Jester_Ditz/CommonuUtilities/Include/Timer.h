@@ -1,5 +1,9 @@
 #pragma once
-#include "pch.h"
+
+#include <cstdint>
+#include <chrono>
+#include <ctime>
+#include <ratio>
 namespace CommonUtilities
 {
 	class Timer

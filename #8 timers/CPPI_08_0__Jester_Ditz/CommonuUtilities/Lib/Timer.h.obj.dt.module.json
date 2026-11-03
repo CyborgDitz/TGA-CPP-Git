@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "..\\Lib\\Timer.obj",
+            "outputs": [
+                "..\\Lib\\Timer.h.obj.dt.module.json",
+                "..\\Lib\\Timer.h.obj.dt.d.json",
+                "..\\Lib\\CPPI_08_0__Jester_Ditz\\debug\\.pch"
+            ],
+            "requires": []
+        }
+    ]
+}
