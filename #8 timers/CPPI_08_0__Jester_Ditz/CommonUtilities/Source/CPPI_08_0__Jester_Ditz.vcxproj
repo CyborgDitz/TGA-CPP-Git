@@ -51,22 +51,22 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\Lib\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>..\Lib\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName>$(ProjectName)_$(Platform)</TargetName>
+    <OutDir>$(SolutionDir)\..\Lib\</OutDir>
+    <IntDir>$(SolutionDir)\Dump\</IntDir>
+    <TargetName>CommonUtilities_$(Platform)_$(Configuration)</TargetName>
     <IncludePath>$(SolutionDir)\..\Include\</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>..\Lib\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>..\Lib\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName>$(ProjectName)_$(Platform)</TargetName>
+    <OutDir>$(SolutionDir)\..\Lib\</OutDir>
+    <IntDir>$(SolutionDir)\Dump\</IntDir>
+    <TargetName>CommonUtilities_$(Platform)_$(Configuration)</TargetName>
     <IncludePath>$(SolutionDir)\..\Include\</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CommonTest|x64'">
-    <OutDir>..\Lib\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>..\Lib\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)\..\Lib\</OutDir>
+    <IntDir>$(SolutionDir)\Dump\</IntDir>
     <IncludePath>$(SolutionDir)\..\Include\</IncludePath>
-    <TargetName>$(ProjectName)_$(Platform)</TargetName>
+    <TargetName>CommonUtilities_$(Platform)_$(Configuration)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -157,6 +157,7 @@
       <PrecompiledHeader />
       <PrecompiledHeaderFile />
       <PrecompiledHeaderOutputFile />
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
