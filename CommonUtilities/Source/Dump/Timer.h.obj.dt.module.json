@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\TGA CPP Git\\CommonUtilities\\Source\\Dump\\Timer.obj",
+            "outputs": [
+                "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\TGA CPP Git\\CommonUtilities\\Source\\Dump\\Timer.h.obj.dt.module.json",
+                "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\TGA CPP Git\\CommonUtilities\\Source\\Dump\\Timer.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

@@ -13,7 +13,7 @@ int main()
 	{
 		timer.Update();
 		
-		Sleep(100);
+		Sleep(1000);
 
 		std::cout << "The DeltaTime: " << timer.GetDeltaTime() << std::endl; 
 		std::cout << "The Time Total  " << timer.GetTotalTime() << std::endl;

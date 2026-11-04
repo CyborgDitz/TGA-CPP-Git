@@ -63,8 +63,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SourceDir)\..\CommonUtilities\Lib\ </AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(SourceDir)\..\CommonUtilities\Lib\CommonUtilities_$(Platform)_$(Configuration).lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SourceDir)..\CommonUtilities\Lib\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CommonUtilities.lib</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
@@ -85,8 +85,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SourceDir)\..\CommonUtilities\Lib\ </AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(SourceDir)\..\CommonUtilities\Lib\CommonUtilities_$(Platform)_$(Configuration).lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SourceDir)..\CommonUtilities\Lib\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CommonUtilities.lib</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
