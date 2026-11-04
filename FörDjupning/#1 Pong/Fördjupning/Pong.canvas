@@ -9,7 +9,8 @@
 		{"id":"43e1aa4f3fe19d10","x":450,"y":-500,"width":250,"height":60,"color":"6","type":"text","text":"sharedData"},
 		{"id":"41bd6c11579cd0a0","x":800,"y":-580,"width":250,"height":50,"color":"5","type":"text","text":"-> Grapphics stuff"},
 		{"id":"d518f5246c478f00","type":"text","text":"struct Ball ","x":-115,"y":-150,"width":250,"height":50,"color":"4"},
-		{"id":"88692e0c1cd3df0c","type":"text","text":"struct Paddle","x":200,"y":-150,"width":250,"height":50,"color":"4"}
+		{"id":"88692e0c1cd3df0c","type":"text","text":"struct Paddle","x":200,"y":-150,"width":250,"height":50,"color":"4"},
+		{"id":"0f5f126ba28559f2","x":558,"y":-248,"width":492,"height":296,"type":"text","text":"1. Ball\n\t1. Random mid pos\n\t2. vector2 direction\n2. Score Tracker\n\t1. Display\n3. Player\n4. AI\n5. Collision System"}
 	],
 	"edges":[
 		{"id":"513c6153ee6c51dd","fromNode":"def9809dec1b2c25","fromSide":"bottom","toNode":"a889b7d669e8876e","toSide":"top"},
