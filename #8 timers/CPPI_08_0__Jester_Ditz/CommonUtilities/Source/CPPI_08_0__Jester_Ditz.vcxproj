@@ -51,22 +51,22 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)\..\Lib\</OutDir>
+    <OutDir>$(SolutionDir)\..\Lib\$(Configuration)</OutDir>
     <IntDir>$(SolutionDir)\Dump\</IntDir>
-    <TargetName>CommonUtilities_$(Platform)_$(Configuration)</TargetName>
+    <TargetName>CommonUtilities</TargetName>
     <IncludePath>$(SolutionDir)\..\Include\</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)\..\Lib\</OutDir>
-    <IntDir>$(SolutionDir)\Dump\</IntDir>
-    <TargetName>CommonUtilities_$(Platform)_$(Configuration)</TargetName>
+    <OutDir>$(SolutionDir)\..\Lib\$(Configuration)</OutDir>
+    <IntDir>$(SolutionDir)\..\Lib\</IntDir>
+    <TargetName>CommonUtilities</TargetName>
     <IncludePath>$(SolutionDir)\..\Include\</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CommonTest|x64'">
-    <OutDir>$(SolutionDir)\..\Lib\</OutDir>
-    <IntDir>$(SolutionDir)\Dump\</IntDir>
+    <OutDir>$(SolutionDir)\..\Lib\$(Configuration)</OutDir>
+    <IntDir>$(SolutionDir)\..\Lib\</IntDir>
     <IncludePath>$(SolutionDir)\..\Include\</IncludePath>
-    <TargetName>CommonUtilities_$(Platform)_$(Configuration)</TargetName>
+    <TargetName>CommonUtilities</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>

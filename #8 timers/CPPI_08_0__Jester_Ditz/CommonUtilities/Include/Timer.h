@@ -20,7 +20,7 @@ namespace CommonUtilities
 
 		private:
 			const std::chrono::high_resolution_clock myClockTime;
-			//call t1, do stuff between, call t2, t2 -1 = timespanofAssFuck
+	
 			const std::chrono::high_resolution_clock::time_point myTimeNow;
 			 std::chrono::high_resolution_clock::time_point myDeltaTime;
 			
