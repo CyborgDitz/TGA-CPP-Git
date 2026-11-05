@@ -12,17 +12,10 @@
             "id": "c546b46c27794cbc",
             "type": "leaf",
             "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Pong.canvas",
-                "viewState": {
-                  "x": 402.7375393996161,
-                  "y": -214.2844507036003,
-                  "zoom": -0.4948470203527107
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "Pong"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]

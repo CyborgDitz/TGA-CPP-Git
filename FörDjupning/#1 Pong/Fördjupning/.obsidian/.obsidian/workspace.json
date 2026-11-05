@@ -11,10 +11,10 @@
             "id": "fc5e9213fdc078bd",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -182,5 +182,7 @@
     }
   },
   "active": "fc5e9213fdc078bd",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Untitled.canvas"
+  ]
 }
