@@ -16,7 +16,7 @@ namespace CommonUtilities
 		bool IsMouseButtonDown(const int aKeyCode) const;
 		bool IsMouseButtonReleased(const int aKeyCode) const;
 		bool GetMousePosition(UINT message) const;
-		int Getkey();
+		int GetKey()  const;
 
 
 		bool UpdateEvents(UINT message, WPARAM wParam, LPARAM lParam);

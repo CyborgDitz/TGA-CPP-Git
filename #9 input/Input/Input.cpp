@@ -8,9 +8,13 @@ namespace CommonUtilities
 {
 	bool Input::UpdateEvents(UINT message, WPARAM wParam, LPARAM lParam)
 	{
+		if (message == WM_KEYDOWN)
+		{
 		return false;
+
+		}
 	}
-	int Getkey()
+	int Input::GetKey() const
 	{
 		while (true)
 		{
