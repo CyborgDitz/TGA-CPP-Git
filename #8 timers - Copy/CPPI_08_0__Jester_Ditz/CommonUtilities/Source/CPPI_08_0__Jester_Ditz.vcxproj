@@ -58,13 +58,13 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)\..\Lib\$(Configuration)</OutDir>
-    <IntDir>$(SolutionDir)\..\Lib\</IntDir>
+    <IntDir>$(SolutionDir)\Dump\</IntDir>
     <TargetName>CommonUtilities</TargetName>
     <IncludePath>$(SolutionDir)\..\Include\</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CommonTest|x64'">
     <OutDir>$(SolutionDir)\..\Lib\$(Configuration)</OutDir>
-    <IntDir>$(SolutionDir)\..\Lib\</IntDir>
+    <IntDir>$(SolutionDir)\Dump\</IntDir>
     <IncludePath>$(SolutionDir)\..\Include\</IncludePath>
     <TargetName>CommonUtilities</TargetName>
   </PropertyGroup>

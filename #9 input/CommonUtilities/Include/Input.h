@@ -10,18 +10,19 @@ namespace CommonUtilities
 	{
 	public:
 		bool IsKeyPressed(const int aKeyCode) const;
-		bool IsKeyDown(const int aKeyCode) const;
 		bool IsKeyReleased(const int aKeyCode) const;
+		bool IsKeyDown(const int aKeyCode) const;
 		bool IsMouseButtonPressed(const int aKeyCode) const;
 		bool IsMouseButtonDown(const int aKeyCode) const;
 		bool IsMouseButtonReleased(const int aKeyCode) const;
 		bool GetMousePosition(UINT message) const;
-		int GetKey()  const;
 
 
 		bool UpdateEvents(UINT message, WPARAM wParam, LPARAM lParam);
 		private:
 
+			bool myIsKeydown = false;
+			bool myKeyIsReleased = false;
 	};
 
 }
