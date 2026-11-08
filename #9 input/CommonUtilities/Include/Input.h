@@ -20,9 +20,8 @@ namespace CommonUtilities
 
 		bool UpdateEvents(UINT message, WPARAM wParam, LPARAM lParam);
 		private:
-
-			bool myIsKeydown = false;
-			bool myKeyIsReleased = false;
+	
+			bool myIsKeyHandled = false;
 	};
 
 }

@@ -153,7 +153,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Input.h" />
+    <ClInclude Include="..\Include\Input.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Input.cpp" />
