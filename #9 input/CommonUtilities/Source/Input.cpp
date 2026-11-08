@@ -7,23 +7,37 @@
 
 namespace CommonUtilities
 {
+
+	int getkey() {
+
+		for (int i = 1; i < 255; ++i) 
+		{
+			// The bitwise and selects the function behavior (look at doc)
+			if (GetAsyncKeyState(i) & 0x07)
+			{
+				return i;
+			}
+
+
+		}
+	}
 	bool Input::UpdateEvents(UINT message, WPARAM wParam, LPARAM lParam)
 	{
 		/*-Update Events gets message and param
 			-- IsKeyPressed" gets wParam IF message is WM_KeyDown
 			-- IsMousePressed gets wParam if Message is MOUSEEVENTF_XDOWN*/
-		//
+			//
 		switch (message)
 		{
 		case (WM_KEYDOWN):
-			{
+		{
 			myIsKeyHandled = IsKeyPressed(wParam);
 			while (WM_KEYDOWN)
-				{
+			{
 				return IsKeyDown(wParam);
-				}
-			break;
 			}
+			break;
+		}
 		case(WM_KEYUP):
 		{
 			myIsKeyHandled = IsKeyReleased(wParam);
@@ -37,13 +51,13 @@ namespace CommonUtilities
 		}
 
 		}
-		
+
 		return myIsKeyHandled;
 	}
 
 	bool Input::IsKeyPressed(const int aKeyCode) const
 	{
-		if (GetAsyncKeyState(aKeyCode) <0 )
+		if (GetAsyncKeyState(aKeyCode) < 0)
 		{
 			return true;
 		}

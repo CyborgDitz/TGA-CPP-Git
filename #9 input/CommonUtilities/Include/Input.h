@@ -1,4 +1,5 @@
-#pragma once#include "Input.h"
+#pragma once
+#include "Input.h"
 #include "windows.h"
 #include "winuser.h"
 #include "wincon.h"
@@ -21,7 +22,10 @@ namespace CommonUtilities
 		bool UpdateEvents(UINT message, WPARAM wParam, LPARAM lParam);
 		private:
 	
-			bool myIsKeyHandled = false;
+		int GetKey();
+		bool myIsKeyHandled = false;
 	};
+
+
 
 }
