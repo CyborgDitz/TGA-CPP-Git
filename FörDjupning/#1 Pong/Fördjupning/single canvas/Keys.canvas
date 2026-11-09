@@ -1,0 +1,14 @@
+{
+	"nodes":[
+		{"id":"6ac96ed6e4c39983","type":"group","x":-130,"y":-340,"width":250,"height":800,"label":"Key Colors"},
+		{"id":"045193551c5488d0","type":"text","text":"Data\n#move","x":-120,"y":60,"width":215,"height":60,"color":"6"},
+		{"id":"95cf76803cbd81d7","type":"text","text":"Loops\n","x":-120,"y":160,"width":215,"height":60,"color":"#ff00ff"},
+		{"id":"ce0c3ea85918caa7","type":"text","text":"Interaction\n#input #coll","x":-120,"y":260,"width":215,"height":60,"color":"1"},
+		{"id":"6da658c5e6098f22","type":"text","text":"We have this shit!\n#Got","x":-120,"y":360,"width":215,"height":60,"color":"5"},
+		{"id":"ac1dbeeac4762904","type":"text","text":"Spirte Object #sprite","x":-120,"y":-320,"width":215,"height":65,"color":"#002aff"},
+		{"id":"1934ac6d20eb05a4","type":"text","text":"**Player Color**\n#player","x":-120,"y":-230,"width":215,"height":60,"color":"2"},
+		{"id":"5b1f6d99249ed6d3","type":"text","text":"Obstacle\n#Obstacle","x":-120,"y":-130,"width":215,"height":60,"color":"4"},
+		{"id":"55d22de2bd3ba176","type":"text","text":"Factory #factory #obstacle","x":-120,"y":-30,"width":215,"height":50,"color":"#7cc081"}
+	],
+	"edges":[]
+}

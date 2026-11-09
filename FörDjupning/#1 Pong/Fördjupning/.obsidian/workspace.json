@@ -6,16 +6,23 @@
       {
         "id": "e20ce00c14d1c3d4",
         "type": "tabs",
-        "dimension": 74.77876106194691,
+        "dimension": 74.74185861795075,
         "children": [
           {
             "id": "c546b46c27794cbc",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "canvas",
+              "state": {
+                "file": "2. Flappy HeliCopter.canvas",
+                "viewState": {
+                  "x": -1149.6294089354365,
+                  "y": -1761.2328207099222,
+                  "zoom": -0.46037322317908064
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "2. Flappy HeliCopter"
             }
           }
         ]
@@ -23,7 +30,7 @@
       {
         "id": "aa633eef34163886",
         "type": "tabs",
-        "dimension": 25.221238938053098,
+        "dimension": 25.258141382049242,
         "children": [
           {
             "id": "586adcba3c846acd",
@@ -204,7 +211,11 @@
   },
   "active": "c546b46c27794cbc",
   "lastOpenFiles": [
-    "Pong.canvas",
+    "1. Pong.canvas",
+    "TGE  Helicopter GameWorld Code.md",
+    "single canvas/Keys.canvas",
+    "2. Flappy HeliCopter.canvas",
+    "single canvas",
     "Welcome.md",
     "desktop.ini",
     "Untitled"
