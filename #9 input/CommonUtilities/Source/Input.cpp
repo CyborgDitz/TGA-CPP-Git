@@ -8,18 +8,16 @@
 namespace CommonUtilities
 {
 
-	int getkey() {
+	int  Input::GetKey(const WPARAM aKeyCode) const
+	{
+		const int maxKey = 255;
 
-		for (int i = 1; i < 255; ++i) 
+		// The bitwise and selects the function behavior (look at doc)
+		if (0 < aKeyCode && aKeyCode < maxKey)
 		{
-			// The bitwise and selects the function behavior (look at doc)
-			if (GetAsyncKeyState(i) & 0x07)
-			{
-				return i;
-			}
-
-
+			return static_cast<int>(aKeyCode);
 		}
+		return 0;
 	}
 	bool Input::UpdateEvents(UINT message, WPARAM wParam, LPARAM lParam)
 	{
@@ -31,94 +29,106 @@ namespace CommonUtilities
 		{
 		case (WM_KEYDOWN):
 		{
-			myIsKeyHandled = IsKeyPressed(wParam);
+			myIsKeyHandled = IsKeyDown(GetKey(wParam));
+
 			while (WM_KEYDOWN)
 			{
-				return IsKeyDown(wParam);
+				return IsKeyDown(GetKey(wParam));
 			}
 			break;
 		}
 		case(WM_KEYUP):
 		{
-			myIsKeyHandled = IsKeyReleased(wParam);
+			myIsKeyHandled = IsKeyReleased(GetKey(wParam));
 			break;
 		}
 
-		case (MOUSEEVENTF_XDOWN):
+		case (WM_LBUTTONDOWN):
 		{
-			myIsKeyHandled = IsMouseButtonPressed(wParam);
+			myIsKeyHandled = IsMouseButtonPressed(GetKey(wParam));
+			break;
+		}
+		case (WM_LBUTTONUP):
+		{
+			break;
+		}
+		case (WM_MBUTTONDOWN):
+		{
+			break;
+		}
+		case (WM_MBUTTONUP):
+		{
 			break;
 		}
 
-		}
 
 		return myIsKeyHandled;
+		}
 	}
-
-	bool Input::IsKeyPressed(const int aKeyCode) const
-	{
-		if (GetAsyncKeyState(aKeyCode) < 0)
+		bool Input::IsKeyPressed(const int aKeyCode) const
 		{
+			if (0 == aKeyCode)
+			{
+				return false;
+			}
+
 			return true;
 		}
 
-		return false;
-	}
-
-	bool Input::IsKeyDown(const int aKeyCode) const
-	{
-
-		// key is down
-		while (IsKeyPressed(aKeyCode)) //not up
+		bool Input::IsKeyDown(const int aKeyCode) const
 		{
-			return 1;
-		}
 
-		return 0;
-	}
-	bool Input::IsKeyReleased(const int aKeyCode) const
-	{
+			// key is down
+			while (IsKeyPressed(aKeyCode)) //not up
+			{
+				return true;
+			}
 
-
-		//key needs to have been down and then send bool when released
-		if (IsKeyDown(aKeyCode) == true)
-		{
-			return true;
-
-		}
-		else if (IsKeyPressed(aKeyCode) == false && IsKeyDown(aKeyCode) == true)
-		{
 			return false;
 		}
-		return true;
-	}
-
-	bool Input::IsMouseButtonDown(const int aKeyCode) const
-	{
-		return true;
-	}
-
-	bool Input::IsMouseButtonPressed(const int aKeyCode) const
-	{
-		return true;
-	}
-
-	bool Input::IsMouseButtonReleased(const int aKeyCode) const
-	{
-		return true;
-	}
-
-	bool Input::GetMousePosition(UINT message) const
-	{
-		return true;
-	}
-
-	//POINT ::Input::GetMousePosition() const
-	//{
-	// // if (point =< vector.x)(point = vector.x/*screensize.x/*)
-	//	 // if (point =< vector.y)(point = vector.y/*screensize.y/*)
-	//	return POINT();
-	//}
+		bool Input::IsKeyReleased(const int aKeyCode) const
+		{
 
 
+			//key needs to have been down and then send bool when released
+			if (IsKeyDown(aKeyCode) == true)
+			{
+				return true;
+
+			}
+			else if (IsKeyPressed(aKeyCode) == false && IsKeyDown(aKeyCode) == true)
+			{
+				return false;
+			}
+			return true;
+		}
+
+		bool Input::IsMouseButtonDown(const int aKeyCode) const
+		{
+			return true;
+		}
+
+		bool Input::IsMouseButtonPressed(const int aKeyCode) const
+		{
+			return true;
+		}
+
+		bool Input::IsMouseButtonReleased(const int aKeyCode) const
+		{
+			return true;
+		}
+
+		bool Input::GetMousePosition(UINT message) const
+		{
+			return true;
+		}
+
+		//POINT ::Input::GetMousePosition() const
+		//{
+		// // if (point =< vector.x)(point = vector.x/*screensize.x/*)
+		//	 // if (point =< vector.y)(point = vector.y/*screensize.y/*)
+		//	return POINT();
+		//}
+
+	
 }

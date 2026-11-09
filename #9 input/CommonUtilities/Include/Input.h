@@ -10,6 +10,12 @@ namespace CommonUtilities
 	class Input
 	{
 	public:
+
+		struct MousePos
+		{
+			int xPos = {};
+			int yPos ={};
+		};
 		bool IsKeyPressed(const int aKeyCode) const;
 		bool IsKeyReleased(const int aKeyCode) const;
 		bool IsKeyDown(const int aKeyCode) const;
@@ -19,10 +25,13 @@ namespace CommonUtilities
 		bool GetMousePosition(UINT message) const;
 
 
+		int  GetKey(const WPARAM aKeyCode) const;
+
 		bool UpdateEvents(UINT message, WPARAM wParam, LPARAM lParam);
 		private:
 	
-		int GetKey();
+			bool myOtherKey = false;
+
 		bool myIsKeyHandled = false;
 	};
 
