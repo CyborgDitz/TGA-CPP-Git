@@ -1,5 +1,5 @@
 #pragma once
-#include "Input.h"
+
 #include "windows.h"
 #include "winuser.h"
 #include "wincon.h"
@@ -19,10 +19,13 @@ namespace CommonUtilities
 		bool GetMousePosition(UINT message) const;
 
 
+		int Getkey(int aKeyCode) const;
+
 		bool UpdateEvents(UINT message, WPARAM wParam, LPARAM lParam);
 		private:
 	
-		int GetKey();
+		int myKeyRange = 255;
+		
 		bool myIsKeyHandled = false;
 	};
 

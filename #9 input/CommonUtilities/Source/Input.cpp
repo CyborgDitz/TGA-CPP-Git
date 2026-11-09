@@ -3,24 +3,27 @@
 #include "winuser.h"
 #include "wincon.h"
 
-/* https://stackoverflow.com/questions/9326364/how-to-get-direct-keyboard-input-in-c  source */
 
 namespace CommonUtilities
 {
 
-	int getkey() {
+	int Input::Getkey(int aKeyCode) 
+	{
+		const int minParam = 0;
+		const int maxParam = 255;
 
-		for (int i = 1; i < 255; ++i) 
+		if (0 < aKeyCode && aKeyCode <= maxParam)
+
 		{
-			// The bitwise and selects the function behavior (look at doc)
-			if (GetAsyncKeyState(i) & 0x07)
-			{
-				return i;
-			}
-
-
+			return aKeyCode;
 		}
+		else
+		{
+			return 0;
+		}
+
 	}
+
 	bool Input::UpdateEvents(UINT message, WPARAM wParam, LPARAM lParam)
 	{
 		/*-Update Events gets message and param
@@ -29,26 +32,27 @@ namespace CommonUtilities
 			//
 		switch (message)
 		{
-		case (WM_KEYDOWN):
-		{
-			myIsKeyHandled = IsKeyPressed(wParam);
-			while (WM_KEYDOWN)
+			case (WM_KEYDOWN):
 			{
-				return IsKeyDown(wParam);
+				i
+				myIsKeyHandled = IsKeyPressed(GetKey(wParam));
+				while (myIsKeyHandled == true)
+				{
+					return IsKeyDown(wParam);
+				}
+				break;
 			}
-			break;
-		}
-		case(WM_KEYUP):
-		{
-			myIsKeyHandled = IsKeyReleased(wParam);
-			break;
-		}
+			case(WM_KEYUP):
+			{
+				myIsKeyHandled = IsKeyReleased(wParam);
+				break;
+			}
 
-		case (MOUSEEVENTF_XDOWN):
-		{
-			myIsKeyHandled = IsMouseButtonPressed(wParam);
-			break;
-		}
+			case (MOUSEEVENTF_XDOWN):
+			{
+				myIsKeyHandled = IsMouseButtonPressed(wParam);
+				break;
+			}
 
 		}
 
