@@ -3,20 +3,28 @@
 #include "windows.h"
 #include "winuser.h"
 #include "wincon.h"
+#include <array>
 namespace CommonUtilities
 {
+	struct Pos
+	{
+		float x = {};
+		float y = {};
+	};
 
 
 	class Input
 	{
 	public:
 
-		struct MousePos
+		struct Mouse
 		{
+			Pos myCurrentPos;
+			Pos myOldPos;
+			Pos myDeltaPos;
 			
-			float x = {};
-			float y = {};
 		};
+
 		bool IsKeyPressed(const int aKeyCode) const;
 		bool IsKeyReleased(const int aKeyCode) const;
 		bool IsKeyDown(const int aKeyCode) const;
@@ -31,9 +39,12 @@ namespace CommonUtilities
 		bool UpdateEvents(UINT message, WPARAM wParam, LPARAM lParam);
 		private:
 			Mouse myMouse;
-
-			bool myIsOtherKey = false;
-			bool myIsCurrentKey = false;
+		
+			const int myKeyMax = 255;
+			std::array<bool, 255>myCurrentKey;
+			std::array<bool, 255>myOldKey;
+			std::array<bool, 255>myState;
+			
 	};
 
 
