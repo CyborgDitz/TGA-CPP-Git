@@ -6,7 +6,7 @@
 #include <array>
 namespace CommonUtilities
 {
-	struct Pos
+	struct Vector2Pos
 	{
 		float x = {};
 		float y = {};
@@ -19,9 +19,9 @@ namespace CommonUtilities
 
 		struct Mouse
 		{
-			Pos myCurrentPos;
-			Pos myOldPos;
-			Pos myDeltaPos;
+			Vector2Pos myCurrentPos;
+			Vector2Pos myOldPos;
+			Vector2Pos myDeltaPos;
 			
 		};
 
