@@ -11,10 +11,11 @@ namespace CommonUtilities
 	{
 	public:
 
-		struct MousePos
+		struct Mouse
 		{
-			int xPos = {};
-			int yPos ={};
+			
+			int posX = {};
+			int posY = {};
 		};
 		bool IsKeyPressed(const int aKeyCode) const;
 		bool IsKeyReleased(const int aKeyCode) const;
@@ -29,10 +30,10 @@ namespace CommonUtilities
 
 		bool UpdateEvents(UINT message, WPARAM wParam, LPARAM lParam);
 		private:
-	
-			bool myOtherKey = false;
+			Mouse myMouse;
 
-		bool myIsKeyHandled = false;
+			bool myIsOtherKey = false;
+			bool myIsCurrentKey = false;
 	};
 
 

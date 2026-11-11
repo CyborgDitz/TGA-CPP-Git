@@ -2,6 +2,8 @@
 #include "windows.h"
 #include "winuser.h"
 #include "wincon.h"
+#include <Windowsx.h>
+
 
 /* https://stackoverflow.com/questions/9326364/how-to-get-direct-keyboard-input-in-c  source */
 
@@ -29,7 +31,7 @@ namespace CommonUtilities
 		{
 		case (WM_KEYDOWN):
 		{
-			myIsKeyHandled = IsKeyDown(GetKey(wParam));
+			myIsCurrentKey = IsKeyDown(GetKey(wParam));
 
 			while (WM_KEYDOWN)
 			{
@@ -39,13 +41,13 @@ namespace CommonUtilities
 		}
 		case(WM_KEYUP):
 		{
-			myIsKeyHandled = IsKeyReleased(GetKey(wParam));
+			myIsCurrentKey = IsKeyReleased(GetKey(wParam));
 			break;
 		}
 
 		case (WM_LBUTTONDOWN):
 		{
-			myIsKeyHandled = IsMouseButtonPressed(GetKey(wParam));
+			myIsCurrentKey = IsMouseButtonPressed(GetKey(wParam));
 			break;
 		}
 		case (WM_LBUTTONUP):
@@ -60,9 +62,15 @@ namespace CommonUtilities
 		{
 			break;
 		}
+		case(WM_MOUSEMOVE):
+		{
+			myMouse.posX = GET_X_LPARAM(lParam);
+			myMouse.posY = GET_Y_LPARAM(lParam);
+			break;
+		}
 
 
-		return myIsKeyHandled;
+		return myIsCurrentKey;
 		}
 	}
 		bool Input::IsKeyPressed(const int aKeyCode) const
@@ -79,7 +87,7 @@ namespace CommonUtilities
 		{
 
 			// key is down
-			while (IsKeyPressed(aKeyCode)) //not up
+			while (myIsCurrentKey == true) //not up
 			{
 				return true;
 			}
@@ -91,9 +99,9 @@ namespace CommonUtilities
 
 
 			//key needs to have been down and then send bool when released
-			if (IsKeyDown(aKeyCode) == true)
+			return (myIsCurrentKey)
 			{
-				return true;
+				return 
 
 			}
 			else if (IsKeyPressed(aKeyCode) == false && IsKeyDown(aKeyCode) == true)
