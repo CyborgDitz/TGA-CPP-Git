@@ -16,9 +16,9 @@
               "state": {
                 "file": "2. Flappy HeliCopter.canvas",
                 "viewState": {
-                  "x": -1149.6294089354365,
-                  "y": -1761.2328207099222,
-                  "zoom": -0.46037322317908064
+                  "x": -1013.7294212656046,
+                  "y": -1638.3219592324322,
+                  "zoom": -0.793706556512414
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -209,12 +209,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "c546b46c27794cbc",
+  "active": "586adcba3c846acd",
   "lastOpenFiles": [
+    "2. Flappy HeliCopter.canvas",
     "1. Pong.canvas",
     "TGE  Helicopter GameWorld Code.md",
     "single canvas/Keys.canvas",
-    "2. Flappy HeliCopter.canvas",
     "single canvas",
     "Welcome.md",
     "desktop.ini",

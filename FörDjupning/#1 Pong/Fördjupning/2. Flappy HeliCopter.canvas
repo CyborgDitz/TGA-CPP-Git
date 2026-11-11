@@ -11,7 +11,6 @@
 		{"id":"a03ffd0165f2554d","type":"text","text":"// Play only moves pos.y","x":-577,"y":-745,"width":166,"height":55},
 		{"id":"b446a21374f027f6","type":"text","text":"Input\n#move\n#Got","x":-783,"y":-630,"width":152,"height":90,"color":"6"},
 		{"id":"377679e9693cb8c5","type":"text","text":"Press Space to go Up\n#input #move","x":-807,"y":-525,"width":204,"height":60,"color":"2"},
-		{"id":"6f7adec25ce094c3","type":"text","text":"[[TGE  Helicopter GameWorld Code]]","x":-830,"y":-1240,"width":250,"height":60},
 		{"id":"4c28deede30f75db","type":"text","text":"Player Moves Up and Down #player","x":-731,"y":-940,"width":200,"height":80,"color":"2"},
 		{"id":"789aa4ea38e092c0","type":"text","text":"class SpriteObject\n\n#sprite","x":-380,"y":-970,"width":262,"height":110,"color":"#0008ff"},
 		{"id":"b582051e620f1f6b","type":"file","file":"single canvas/Keys.canvas","x":-52,"y":-1905,"width":467,"height":780},
@@ -38,11 +37,13 @@
 		{"id":"2c94a40af642fbfb","type":"text","text":"We have this shit!\n#Got","x":515,"y":-1165,"width":215,"height":60,"color":"5"},
 		{"id":"2408a7d4911545f6","type":"text","text":"class Obstacle \n*\n\n*","x":-1100,"y":-2260,"width":250,"height":136},
 		{"id":"7bd3d59f3d03c482","type":"text","text":"class Player \n*\n\n*","x":-1570,"y":-2260,"width":250,"height":136},
-		{"id":"78b6c5dbeae18b41","type":"text","text":"SpriteObjects","x":-1350,"y":-2480,"width":250,"height":120},
 		{"id":"af687b645f5a6c63","type":"text","text":"VectorOfOBjects","x":-1350,"y":-1880,"width":250,"height":60},
 		{"id":"a47c17016fd249e3","type":"text","text":"MoveObjectsInVector","x":-1350,"y":-1760,"width":250,"height":80,"color":"#ff00ff"},
 		{"id":"fc60d46bc5f23dc4","type":"text","text":"GameWOrld","x":-1350,"y":-2000,"width":250,"height":60},
-		{"id":"793d3c3726fb92dd","x":-1401,"y":-1489,"width":250,"height":60,"type":"text","text":"vector[0].move"}
+		{"id":"6f7adec25ce094c3","type":"text","text":"[[TGE  Helicopter GameWorld Code]]","x":-830,"y":-1240,"width":250,"height":60},
+		{"id":"793d3c3726fb92dd","type":"text","text":"vector[0].move","x":-1350,"y":-1580,"width":250,"height":60},
+		{"id":"78b6c5dbeae18b41","type":"text","text":"SpriteObjects","x":-1350,"y":-2480,"width":250,"height":120},
+		{"id":"ad2e71c1a608acf0","x":-1040,"y":-1760,"width":250,"height":70,"type":"text","text":""}
 	],
 	"edges":[
 		{"id":"c38393f048b36ef5","fromNode":"377679e9693cb8c5","fromSide":"right","toNode":"1460afc193541a52","toSide":"left","fromEnd":"arrow"},
@@ -67,6 +68,8 @@
 		{"id":"fbb375fd0e7067e7","fromNode":"2408a7d4911545f6","fromSide":"bottom","toNode":"fc60d46bc5f23dc4","toSide":"top"},
 		{"id":"025cd43db4e4c1e1","fromNode":"fc60d46bc5f23dc4","fromSide":"bottom","toNode":"af687b645f5a6c63","toSide":"top"},
 		{"id":"bd7383ddaacc585e","fromNode":"af687b645f5a6c63","fromSide":"bottom","toNode":"a47c17016fd249e3","toSide":"top"},
-		{"id":"b9b271cafb97d7e3","fromNode":"a47c17016fd249e3","fromSide":"bottom","toNode":"793d3c3726fb92dd","toSide":"top"}
+		{"id":"b9b271cafb97d7e3","fromNode":"a47c17016fd249e3","fromSide":"bottom","toNode":"793d3c3726fb92dd","toSide":"top"},
+		{"id":"08fb2d182cdc5206","fromNode":"a47c17016fd249e3","fromSide":"right","toNode":"ad2e71c1a608acf0","toSide":"left"},
+		{"id":"36de87b5c74666bb","fromNode":"2408a7d4911545f6","fromSide":"bottom","toNode":"ad2e71c1a608acf0","toSide":"top"}
 	]
 }
