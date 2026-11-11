@@ -4,20 +4,15 @@
 #include "wincon.h"
 #include <Windowsx.h>
 
-
-/* https://stackoverflow.com/questions/9326364/how-to-get-direct-keyboard-input-in-c  source */
-
 namespace CommonUtilities
 {
 
-	int  Input::GetKey(const WPARAM aKeyCode) const
+	int  Input::GetKey(const WPARAM wParam) const
 	{
-		const int maxKey = 255;
-
-		// The bitwise and selects the function behavior (look at doc)
-		if (0 < aKeyCode && aKeyCode < maxKey)
+		
+		if (0 < wParam && wParam < myKeyMax)
 		{
-			return static_cast<int>(aKeyCode);
+			return (wParam);
 		}
 		return 0;
 	}
@@ -31,7 +26,7 @@ namespace CommonUtilities
 		{
 		case (WM_KEYDOWN):
 		{
-			myIsCurrentKey = IsKeyDown(GetKey(wParam));
+			myCurrentKey[ IsKeyDown(GetKey(wParam)), wParam];
 
 			while (WM_KEYDOWN)
 			{
@@ -41,13 +36,13 @@ namespace CommonUtilities
 		}
 		case(WM_KEYUP):
 		{
-			myIsCurrentKey = IsKeyReleased(GetKey(wParam));
+			myCurrentKey[IsKeyReleased(GetKey(wParam)), wParam];
 			break;
 		}
 
 		case (WM_LBUTTONDOWN):
 		{
-			myIsCurrentKey = IsMouseButtonPressed(GetKey(wParam));
+			myCurrentKey[IsMouseButtonPressed(GetKey(wParam)), wParam];
 			break;
 		}
 		case (WM_LBUTTONUP):
@@ -64,51 +59,30 @@ namespace CommonUtilities
 		}
 		case(WM_MOUSEMOVE):
 		{
-			myMouse.posX = GET_X_LPARAM(lParam);
-			myMouse.posY = GET_Y_LPARAM(lParam);
+			GetMousePosition(WM_MOUSEMOVE);
+			myMouse.myCurrentPos.x = GET_X_LPARAM(lParam);
+			myMouse.myCurrentPos.y = GET_Y_LPARAM(lParam);
 			break;
 		}
 
 
-		return myIsCurrentKey;
+		return 0;
 		}
 	}
 		bool Input::IsKeyPressed(const int aKeyCode) const
 		{
-			if (0 == aKeyCode)
-			{
-				return false;
-			}
-
-			return true;
+			return myState[true,aKeyCode];
 		}
 
 		bool Input::IsKeyDown(const int aKeyCode) const
 		{
-
-			// key is down
-			while (myIsCurrentKey == true) //not up
-			{
-				return true;
-			}
-
-			return false;
+			return myState[true, aKeyCode] && myOldKey[false, aKeyCode]
 		}
 		bool Input::IsKeyReleased(const int aKeyCode) const
 		{
+		
+			return myCurrentKey[false,aKeyCode] && myOldKey[true,aKeyCode];
 
-
-			//key needs to have been down and then send bool when released
-			return (myIsCurrentKey)
-			{
-				return 
-
-			}
-			else if (IsKeyPressed(aKeyCode) == false && IsKeyDown(aKeyCode) == true)
-			{
-				return false;
-			}
-			return true;
 		}
 
 		bool Input::IsMouseButtonDown(const int aKeyCode) const

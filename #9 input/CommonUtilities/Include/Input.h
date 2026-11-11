@@ -11,11 +11,11 @@ namespace CommonUtilities
 	{
 	public:
 
-		struct Mouse
+		struct MousePos
 		{
 			
-			int posX = {};
-			int posY = {};
+			float x = {};
+			float y = {};
 		};
 		bool IsKeyPressed(const int aKeyCode) const;
 		bool IsKeyReleased(const int aKeyCode) const;

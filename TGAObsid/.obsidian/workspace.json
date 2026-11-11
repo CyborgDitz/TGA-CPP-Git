@@ -13,15 +13,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Diablo/Diablo 4.2.canvas",
+                "file": "Uppgift 7 Vector/Untitled.canvas",
                 "viewState": {
-                  "x": -1098.2517647058824,
-                  "y": 2909.749411764706,
-                  "zoom": -3.5352662267897217
+                  "x": -406,
+                  "y": -163.62603878116374,
+                  "zoom": -1.4713712319488228
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "Diablo 4.2"
+              "title": "Untitled"
             }
           }
         ]
@@ -205,15 +205,16 @@
       "bases:Create new base": false
     }
   },
-  "active": "01288612a8f54e69",
+  "active": "b6f6a9acefbb0c4e",
   "lastOpenFiles": [
-    "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide.canvas",
-    "Diablo/Diablo 4.2.canvas",
     "2026-11-05.md",
+    "Linjär Algebra",
+    "2026-10-27.md",
+    "Uppgift 7 Vector/Pasted image 20261029103202.png",
+    "Diablo/Diablo 4.2.canvas",
+    "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide.canvas",
     "Untitled 1.canvas",
     "Uppgift 7 Vector/Untitled.canvas",
-    "2026-10-27.md",
-    "Pasted image 20261029103202.png",
     "Uppgift 7 Vector/FixedVector.md",
     "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide 1.canvas",
     "Uppgift 7 Vector",
@@ -239,7 +240,6 @@
     "Diablo/Reviewed archived Canvases",
     "Diablo/Canvases 3.1",
     "Diablo/decrepit Canvas",
-    "Welcome.md",
-    "Diablo"
+    "Welcome.md"
   ]
 }
