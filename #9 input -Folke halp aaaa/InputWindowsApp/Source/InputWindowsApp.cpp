@@ -3,8 +3,9 @@
 
 #include "framework.h"
 #include "InputWindowsApp.h"
-#include "in"
-
+#include "..\Include\Input.h"
+#include <cstdio>
+#include <iostream>
 
 #define MAX_LOADSTRING 100
 
@@ -27,8 +28,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
 
-    // TODO: Place code here.
-
+    CommonUtilities::Input globalInput;
     // Initialize global strings
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
     LoadStringW(hInstance, IDC_INPUTWINDOWSAPP, szWindowClass, MAX_LOADSTRING);
@@ -43,15 +43,22 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_INPUTWINDOWSAPP));
 
     MSG msg;
-
+    // TODO: Place code here.
+    using namespace CommonUtilities;
     // Main message loop:
+   
     while (GetMessage(&msg, nullptr, 0, 0))
     {
         if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
         {
             TranslateMessage(&msg);
             DispatchMessage(&msg);
+         if (globalInput.IsMouseButtonDown(0x01))
+            {
+             printf("Hoi");
+            }
         }
+       
     }
 
     return (int) msg.wParam;
@@ -98,7 +105,7 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
    hInst = hInstance; // Store instance handle in our global variable
-
+   AllocConsole();
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
 

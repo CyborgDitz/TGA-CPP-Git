@@ -10,7 +10,7 @@ namespace CommonUtilities
 	int Input::GetKey(const WPARAM wParam) const
 	{
 		
-		if (0 < wParam && wParam < myKeyMax)
+		if (0 < wParam && wParam <= myKeyMax)
 		{
 			return (static_cast<int>(wParam));
 		}
@@ -82,7 +82,6 @@ namespace CommonUtilities
 			return false;
 		}
 
-		return true;
 		}
 	}
 		bool Input::IsKeyPressed(const int aKeyCode) const
