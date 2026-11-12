@@ -124,7 +124,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)..\..\CommonUtilities\Lib\$(Configuration)\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>CommonUtilities_$(Configuration).lib</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);CommonUtilities_$(Configuration).lib</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
@@ -146,6 +146,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)..\CommonUtilities\Lib\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);CommonUtilities_$(Configuration).lib</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>

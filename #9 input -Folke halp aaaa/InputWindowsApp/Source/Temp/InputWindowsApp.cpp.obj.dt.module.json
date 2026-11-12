@@ -3,10 +3,10 @@
     "revision": 0,
     "rules": [
         {
-            "primary-output": "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\TGA CPP Git\\#9 input\\InputWindowsApp\\Source\\Temp\\InputWindowsApp.obj",
+            "primary-output": "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\TGA CPP Git\\#9 input -Folke halp aaaa\\InputWindowsApp\\Source\\Temp\\InputWindowsApp.obj",
             "outputs": [
-                "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\TGA CPP Git\\#9 input\\InputWindowsApp\\Source\\Temp\\InputWindowsApp.cpp.obj.dt.module.json",
-                "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\TGA CPP Git\\#9 input\\InputWindowsApp\\Source\\Temp\\InputWindowsApp.cpp.obj.dt.d.json"
+                "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\TGA CPP Git\\#9 input -Folke halp aaaa\\InputWindowsApp\\Source\\Temp\\InputWindowsApp.cpp.obj.dt.module.json",
+                "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\TGA CPP Git\\#9 input -Folke halp aaaa\\InputWindowsApp\\Source\\Temp\\InputWindowsApp.cpp.obj.dt.d.json"
             ],
             "requires": []
         }

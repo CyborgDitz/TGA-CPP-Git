@@ -1,11 +1,11 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\jester.ditz\\onedrive - academedia\\tgacppi26\\tga cpp git\\#9 input\\inputwindowsapp\\source\\inputwindowsapp.cpp",
+        "Source": "c:\\users\\jester.ditz\\onedrive - academedia\\tgacppi26\\tga cpp git\\#9 input -folke halp aaaa\\inputwindowsapp\\source\\inputwindowsapp.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "c:\\users\\jester.ditz\\onedrive - academedia\\tgacppi26\\tga cpp git\\#9 input\\inputwindowsapp\\source\\framework.h",
-            "c:\\users\\jester.ditz\\onedrive - academedia\\tgacppi26\\tga cpp git\\#9 input\\inputwindowsapp\\source\\targetver.h",
+            "c:\\users\\jester.ditz\\onedrive - academedia\\tgacppi26\\tga cpp git\\#9 input -folke halp aaaa\\inputwindowsapp\\source\\framework.h",
+            "c:\\users\\jester.ditz\\onedrive - academedia\\tgacppi26\\tga cpp git\\#9 input -folke halp aaaa\\inputwindowsapp\\source\\targetver.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\shared\\sdkddkver.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\windows.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\shared\\winapifamily.h",
@@ -161,8 +161,8 @@
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\mmintrin.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\zmmintrin.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\ammintrin.h",
-            "c:\\users\\jester.ditz\\onedrive - academedia\\tgacppi26\\tga cpp git\\#9 input\\inputwindowsapp\\source\\inputwindowsapp.h",
-            "c:\\users\\jester.ditz\\onedrive - academedia\\tgacppi26\\tga cpp git\\#9 input\\inputwindowsapp\\source\\resource.h"
+            "c:\\users\\jester.ditz\\onedrive - academedia\\tgacppi26\\tga cpp git\\#9 input -folke halp aaaa\\inputwindowsapp\\source\\inputwindowsapp.h",
+            "c:\\users\\jester.ditz\\onedrive - academedia\\tgacppi26\\tga cpp git\\#9 input -folke halp aaaa\\inputwindowsapp\\source\\resource.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
