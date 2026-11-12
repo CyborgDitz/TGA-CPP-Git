@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "C:\\TGA-CPP-Git\\#9 input\\CommonUtilities\\Source\\Dump\\Source.obj",
+            "outputs": [
+                "C:\\TGA-CPP-Git\\#9 input\\CommonUtilities\\Source\\Dump\\Source.cpp.obj.dt.module.json",
+                "C:\\TGA-CPP-Git\\#9 input\\CommonUtilities\\Source\\Dump\\Source.cpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
