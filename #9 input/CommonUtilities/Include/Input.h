@@ -8,8 +8,8 @@ namespace CommonUtilities
 {
 	struct Vector2Pos
 	{
-		float x = {};
-		float y = {};
+		int x = {};
+		int y = {};
 	};
 
 
@@ -31,7 +31,7 @@ namespace CommonUtilities
 		bool IsMouseButtonPressed(const int aKeyCode) const;
 		bool IsMouseButtonDown(const int aKeyCode) const;
 		bool IsMouseButtonReleased(const int aKeyCode) const;
-		bool GetMousePosition(UINT message) const;
+		bool GetMousePosition(UINT message);
 
 
 		int  GetKey(const WPARAM aKeyCode) const;
@@ -43,7 +43,8 @@ namespace CommonUtilities
 			const int myKeyMax = 255;
 			std::array<bool, 255>myCurrentKey;
 			std::array<bool, 255>myOldKey;
-			std::array<bool, 255>myState;
+			std::array<bool, 255>myMouseKey;
+			std::array<bool, 255>myOldMouseKey;
 			
 	};
 

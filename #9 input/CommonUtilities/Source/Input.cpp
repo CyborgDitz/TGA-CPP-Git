@@ -7,21 +7,22 @@
 namespace CommonUtilities
 {
 
-	int  Input::GetKey(const WPARAM wParam) const
+	int Input::GetKey(const WPARAM wParam) const
 	{
 		
 		if (0 < wParam && wParam < myKeyMax)
 		{
-			return (wParam);
+			return (static_cast<int>(wParam));
 		}
 		return 0;
 	}
 	bool Input::UpdateEvents(UINT message, WPARAM wParam, LPARAM lParam)
 	{
-		/*-Update Events gets message and param
-			-- IsKeyPressed" gets wParam IF message is WM_KeyDown
-			-- IsMousePressed gets wParam if Message is MOUSEEVENTF_XDOWN*/
-			//
+		
+		{//qrikketed
+			myOldKey = myCurrentKey;
+			myOldMouseKey = myMouseKey;
+		}
 		switch (message)
 		{
 		case (WM_KEYDOWN):
@@ -36,61 +37,62 @@ namespace CommonUtilities
 		}
 		case(WM_KEYUP):
 		{
-			myCurrentKey[IsKeyReleased(GetKey(wParam)), wParam];
+			return myCurrentKey[IsKeyReleased(GetKey(wParam)), wParam];
 			break;
 		}
 	
 		case (WM_LBUTTONDOWN):
 		{
-			myState[VK_LBUTTON] = true;
+			return myMouseKey[VK_LBUTTON] = true;
 			break;
 		}
 		case (WM_LBUTTONUP):
 		{
-			myState[VK_LBUTTON] = false;
+			return myMouseKey[VK_LBUTTON] = false;
 			break;
 		}
 		case (WM_RBUTTONDOWN):
 		{
-			myState[VK_RBUTTON] = true;
+			return myMouseKey[VK_RBUTTON] = true;
 			break;
 		}
 		case (WM_RBUTTONUP):
 		{
-			myState[VK_RBUTTON] = false;
+			return myMouseKey[VK_RBUTTON] = false;
 			break;
 		}
 		case (WM_MBUTTONDOWN):
 		{
-
-			myState[VK_MBUTTON] = true;
+			return myMouseKey[VK_MBUTTON] = true;
 			break;
 		}
 		case (WM_MBUTTONUP):
 		{
-			myState[VK_MBUTTON] = false;
+			return myMouseKey[VK_MBUTTON] = false;
 			break;
 		}
 		case(WM_MOUSEMOVE):
 		{
-			GetMousePosition(WM_MOUSEMOVE);
-			myMouse.myCurrentPos.x = GET_X_LPARAM(lParam);
-			myMouse.myCurrentPos.y = GET_Y_LPARAM(lParam);
+			return GetMousePosition(WM_MOUSEMOVE);
+		
 			break;
 		}
-
+		default:
+		{
+			return false;
+		}
 
 		return true;
 		}
 	}
 		bool Input::IsKeyPressed(const int aKeyCode) const
 		{
-			return myState[true,aKeyCode];
+			return myCurrentKey[true, aKeyCode] && myOldKey[false, aKeyCode];
 		}
 
 		bool Input::IsKeyDown(const int aKeyCode) const
 		{
-			return myState[true, aKeyCode] && myOldKey[false, aKeyCode];
+			return myCurrentKey[true, aKeyCode] && myOldKey[true, aKeyCode];
 		}
 		bool Input::IsKeyReleased(const int aKeyCode) const
 		{
@@ -101,23 +103,24 @@ namespace CommonUtilities
 
 		bool Input::IsMouseButtonDown(const int aKeyCode) const
 		{
-
-			return myState[true, aKeyCode];
+			return myMouseKey[true, aKeyCode] && myOldMouseKey[false, aKeyCode];
 		}
 
 		bool Input::IsMouseButtonPressed(const int aKeyCode) const
 		{
-			return true;
+			return myMouseKey[true, aKeyCode] && myOldMouseKey[true, aKeyCode];
 		}
 
 		bool Input::IsMouseButtonReleased(const int aKeyCode) const
 		{
-			return true;
+			return myMouseKey[false, aKeyCode] && myOldMouseKey[true, aKeyCode];
 		}
 
-		bool Input::GetMousePosition(UINT message) const
+		bool Input::GetMousePosition(UINT message)
 		{
-			//return myMouse.myCurrentPos;
+			myMouse.myCurrentPos.x = GET_X_LPARAM(message);
+			myMouse.myCurrentPos.y = GET_Y_LPARAM(message);
+			return true;
 		}
 
 		//POINT ::Input::GetMousePosition() const

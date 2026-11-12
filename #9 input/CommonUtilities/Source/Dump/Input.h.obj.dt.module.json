@@ -3,10 +3,10 @@
     "revision": 0,
     "rules": [
         {
-            "primary-output": "C:\\TGA-CPP-Git\\#9 input\\CommonUtilities\\Source\\Dump\\Input.obj",
+            "primary-output": "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\TGA CPP Git\\#9 input\\CommonUtilities\\Source\\Dump\\Input.obj",
             "outputs": [
-                "C:\\TGA-CPP-Git\\#9 input\\CommonUtilities\\Source\\Dump\\Input.h.obj.dt.module.json",
-                "C:\\TGA-CPP-Git\\#9 input\\CommonUtilities\\Source\\Dump\\Input.h.obj.dt.d.json"
+                "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\TGA CPP Git\\#9 input\\CommonUtilities\\Source\\Dump\\Input.h.obj.dt.module.json",
+                "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\TGA CPP Git\\#9 input\\CommonUtilities\\Source\\Dump\\Input.h.obj.dt.d.json"
             ],
             "requires": []
         }
