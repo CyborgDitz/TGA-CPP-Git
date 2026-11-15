@@ -3,6 +3,7 @@
 
 #include "framework.h"
 #include "InputWindowsApp.h"
+#define _CRT_SECURE_NO_WARNINGS
 #include "..\Include\Input.h"
 #include <cstdio>
 #include <iostream>
@@ -58,7 +59,61 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
              printf("Hoi");
             }
         }
-       
+        globalInput.UpdateEvents(msg.message, msg.wParam, msg.lParam);
+        if (globalInput.IsKeyDown(VK_LBUTTON))
+        {
+            std::cout << "Left mouse button is down \n";
+        }
+      /*  KEY_LMB = VK_LBUTTON,
+            KEY_RMB = VK_RBUTTON,
+            VK_MBUTTON = VK_MBUTTON,*/
+        if (globalInput.IsKeyPressed(VK_LBUTTON))
+        {
+            std::cout << "Right mouse button is down.\n";
+        }
+        if (globalInput.IsKeyDown(VK_LBUTTON))
+        {
+            
+            
+          std::cout << "Mouse Position: [ x: " << globalInput.GetMousePosition().x
+              << " I y: " << globalInput.GetMouseDelta().y << " ]\n";
+            std::cout << "Mouse Delta: [ x: " << globalInput.GetMouseDelta().x << " I y: " << globalInput.GetMouseDelta().y << " ]\n";
+
+            
+            std::cout << "Mouse Wheel Change: " << globalInput.GetWheelScroll() << std::endl;
+        }
+        if (globalInput.IsKeyReleased(VK_LBUTTON))
+        {
+            std::cout << "Right mouse is released.\n";
+        }
+        if (globalInput.IsKeyPressed(VK_MBUTTON))
+        {
+            std::cout << "Middle mouse is pressed\n";
+        }
+        if (globalInput.IsKeyDown('W') || globalInput.IsKeyDown('A') || globalInput.IsKeyDown('S') || globalInput.IsKeyDown('D'))
+        {
+            std::cout << "W A S D is down \n";
+        }
+        if (globalInput.IsKeyPressed('F'))
+        {
+            std::cout << "F is pressed \n";
+
+        }
+        if (globalInput.IsKeyDown('F'))
+        {
+            std::cout << "F is down\n";
+
+        }
+        if (globalInput.IsKeyReleased('F'))
+        {
+            std::cout << "F is released\n";
+
+        }
+        if (globalInput.IsKeyReleased(VK_SPACE))
+        {
+            std::cout << "Space is released\n";
+        }
+    
     }
 
     return (int) msg.wParam;
@@ -103,9 +158,15 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 //        create and display the main program window.
 //
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
+   
 {
+    AllocConsole();
+    freopen("conin$", "r", stdin);
+    freopen("conout$", "w", stdout);
+    freopen("conout$", "w", stderr);
+    printf("Debugging Window:\n");
+    printf("Try pressing buttons: Space, Left mouse, Right mouse, Middle mouse, F, & WASD to test functionality!\n");
    hInst = hInstance; // Store instance handle in our global variable
-   AllocConsole();
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
 

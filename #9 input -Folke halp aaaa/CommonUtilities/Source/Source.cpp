@@ -6,7 +6,7 @@
 //{
 //	Input input;
 //
-//	if( input.IsKeyDown(input.Getkey()) )
+//	if( input.IsKeyDown(input.GetKeyCode()) )
 //	{
 //		return;
 //	}

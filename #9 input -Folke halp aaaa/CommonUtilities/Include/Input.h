@@ -8,8 +8,8 @@ namespace CommonUtilities
 {
 	struct Vector2Pos
 	{
-		int x = {};
-		int y = {};
+		float x = {};
+		float y = {};
 	};
 
 
@@ -21,7 +21,11 @@ namespace CommonUtilities
 		{
 			Vector2Pos myCurrentPos;
 			Vector2Pos myOldPos;
-			Vector2Pos myDeltaPos;
+			Vector2Pos myPosDelta;
+			
+			float currentWheel;
+			float previousWheel;
+			float deltaWheel;
 			
 		};
 
@@ -31,10 +35,19 @@ namespace CommonUtilities
 		bool IsMouseButtonPressed(const int aKeyCode) const;
 		bool IsMouseButtonDown(const int aKeyCode) const;
 		bool IsMouseButtonReleased(const int aKeyCode) const;
-		bool GetMousePosition(UINT message);
-
-
-		int  GetKey(const WPARAM aKeyCode) const;
+		
+		void UpdateMousePosition(UINT message);
+		
+		Vector2Pos GetMousePosition() const { return myMouse.myCurrentPos; }
+		Vector2Pos GetOldMousePosition() const { return myMouse.myOldPos; }
+		Vector2Pos GetMouseDelta() const { return myMouse.myPosDelta; }
+		float GetWheelScroll() const
+		{
+			return myMouse.deltaWheel / 120.0f;
+		}
+		const int  GetKeyCode(const WPARAM wParam) const;
+	
+		bool  IsKeyValid(const WPARAM wParam) const;
 
 		bool UpdateEvents(UINT message, WPARAM wParam, LPARAM lParam);
 		private:
