@@ -3,7 +3,8 @@
 #include "winuser.h"
 #include "wincon.h"
 #include <Windowsx.h>
-
+#include <cstdio>
+#include <iostream>
 namespace CommonUtilities
 {
 
@@ -43,6 +44,7 @@ namespace CommonUtilities
 			{
 				case (WM_KEYDOWN):
 				{
+					std::cout << "Left mouse button is down \n";
 					myCurrentKey[isValid, wParam];
 					break;
 				}
