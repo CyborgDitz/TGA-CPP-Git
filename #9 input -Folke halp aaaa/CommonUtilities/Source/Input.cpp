@@ -7,7 +7,7 @@
 #include <iostream>
 namespace CommonUtilities
 {
-
+	
 	const int Input::GetKeyCode(const WPARAM wParam) const
 	{
 
@@ -29,68 +29,66 @@ namespace CommonUtilities
 	{
 		bool isValid = IsKeyValid(wParam);
 		{//qrikketed
-			for (size_t i = 0; i < myOldKey.size(); i++)
-			{
-				myOldKey = myCurrentKey;
-				myOldMouseKey = myMouseKey;
-			}
+
+			myOldKey = myCurrentKey;
+			myOldMouseKey = myMouseKey;
+
 			myMouse.deltaWheel = myMouse.currentWheel - myMouse.previousWheel;
 			myMouse.previousWheel = myMouse.currentWheel;
 		}
 		if (isValid == true)
 		{
 			switch (message)
-			
 			{
 				case (WM_KEYDOWN):
 				{
-					std::cout << "Left mouse button is down \n";
-					myCurrentKey[isValid, wParam];
+					myCurrentKey[ wParam] =true;
 					break;
 				}
 				case(WM_KEYUP):
 				{
-					myCurrentKey[!isValid, wParam];
+					myCurrentKey[ wParam] = false;
 					break;
-				
+
 				case (WM_LBUTTONDOWN):
 				{
-					myMouseKey[isValid, VK_LBUTTON];
+					myMouseKey[ VK_LBUTTON]= true;
 					break;
 				}
 				case (WM_LBUTTONUP):
-				
-					myMouseKey[!isValid, VK_LBUTTON];
+
+					return myMouseKey[ VK_LBUTTON] = false ;
 					break;
 				}
 				case (WM_RBUTTONDOWN):
 				{
-					myMouseKey[isValid, VK_RBUTTON];
+					return myMouseKey[VK_RBUTTON] = true;
 					break;
 				}
 				case (WM_RBUTTONUP):
 				{
-					myMouseKey[!isValid, VK_RBUTTON];
+					return 	myMouseKey[ VK_RBUTTON] = true;
 					break;
 				}
 				case (WM_MBUTTONDOWN):
 				{
-					myMouseKey[isValid, VK_MBUTTON];
+					return myMouseKey[ VK_MBUTTON] = true ;
 					break;
 				}
 				case (WM_MBUTTONUP):
 				{
-					myMouseKey[!isValid, VK_MBUTTON];
+					return myMouseKey[ VK_MBUTTON] = isValid;
 					break;
 				}
 				case(WM_MOUSEMOVE):
 				{
-					UpdateMousePosition(WM_MOUSEMOVE);
+					 UpdateMousePosition(WM_MOUSEMOVE);
 					break;
 				}
 				default:
 				{
-					isValid = false;
+					 	isValid = false;
+					break;
 				}
 			}
 				return isValid;
@@ -98,17 +96,17 @@ namespace CommonUtilities
 	}
 	bool Input::IsKeyPressed(const int aKeyCode) const
 	{
-		return myCurrentKey[true, aKeyCode] && myOldKey[false, aKeyCode];
+		return myCurrentKey[aKeyCode] == true && myOldKey[aKeyCode] == false;
 	}
 
 	bool Input::IsKeyDown(const int aKeyCode) const
 	{
-		return myCurrentKey[true, aKeyCode] && myOldKey[true, aKeyCode];
+		return myCurrentKey[aKeyCode] == true && myOldKey[aKeyCode] == true;
 	}
 	bool Input::IsKeyReleased(const int aKeyCode) const
 	{
 
-		return myCurrentKey[false, aKeyCode] && myOldKey[true, aKeyCode];
+		return myCurrentKey[aKeyCode] == false && myOldKey[aKeyCode] == true;
 
 	}
 

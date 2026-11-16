@@ -77,6 +77,12 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
                 std::cout << "Mouse Wheel Change: " << globalInput.GetWheelScroll() << std::endl;
             }
+            for (size_t i = 0; i < 255; i++)
+            {
+                if (globalInput.IsKeyDown(i)) std::cout << "key: " << i << " is down" << '\n';
+                if (globalInput.IsKeyPressed(i)) std::cout << "key: " << i << " is pressed" << '\n';
+                if (globalInput.IsKeyReleased(i)) std::cout << "key: " << i << " is released" << '\n';
+            }
             if (globalInput.IsKeyReleased(VK_LBUTTON))
             {
                 std::cout << "Right mouse is released.\n";

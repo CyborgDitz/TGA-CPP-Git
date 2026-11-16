@@ -22,7 +22,7 @@ namespace CommonUtilities
 			Vector2Pos myCurrentPos;
 			Vector2Pos myOldPos;
 			Vector2Pos myDeltaPos;
-			
+
 		};
 
 		bool IsKeyPressed(const int aKeyCode) const;
@@ -37,14 +37,14 @@ namespace CommonUtilities
 		int  GetKey(const WPARAM aKeyCode) const;
 
 		bool UpdateEvents(UINT message, WPARAM wParam, LPARAM lParam);
-		private:
-			Mouse myMouse;
-		
-			const int myKeyMax = 255;
-			std::array<bool, 255>myCurrentKey;
-			std::array<bool, 255>myOldKey;
-			std::array<bool, 255>myMouseKey;
-			std::array<bool, 255>myOldMouseKey;
+	private:
+		Mouse myMouse;
+
+		const int myKeyMax = 255;
+		std::array<bool, 255>myCurrentKey = { false };
+		std::array<bool, 255>myOldKey = { false };
+		std::array<bool, 255>myMouseKey = { false };
+		std::array<bool, 255>myOldMouseKey = {false	};
 			
 	};
 

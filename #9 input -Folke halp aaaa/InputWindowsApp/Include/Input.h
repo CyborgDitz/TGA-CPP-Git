@@ -53,11 +53,11 @@ namespace CommonUtilities
 		private:
 			Mouse myMouse;
 		
-			const int myKeyMax = 255;
-			std::array<bool, 255>myCurrentKey;
-			std::array<bool, 255>myOldKey;
-			std::array<bool, 255>myMouseKey;
-			std::array<bool, 255>myOldMouseKey;
+			const int myKeyMax = 256;
+			std::array<bool, 256>myCurrentKey;
+			std::array<bool, 256>myOldKey;
+			std::array<bool, 256>myMouseKey;
+			std::array<bool, 256>myOldMouseKey;
 			
 	};
 
