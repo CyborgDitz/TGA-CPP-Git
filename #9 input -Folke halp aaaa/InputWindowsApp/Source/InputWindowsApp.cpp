@@ -55,28 +55,68 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
             TranslateMessage(&msg);
             DispatchMessage(&msg);
             globalInput.UpdateEvents(msg.message, msg.wParam, msg.lParam);
+            if (globalInput.IsMouseButtonDown(VK_LBUTTON))
+            {
+                std::cout << "Left mouse button is down \n";
+            }
+           
+            if (globalInput.IsMouseButtonPressed(VK_LBUTTON))
+            {
+                std::cout << "Legt mouse button is pressed.\n";
+            }
+            if (globalInput.IsMouseButtonReleased(VK_LBUTTON))
+            {
+
+                //td::cout << "Right mouse button is Up.\n";
+                //std::cout << "Mouse Position: [ x: " << globalInput.GetMousePosition().x
+                //    << " I y: " << globalInput.GetMouseDelta().y << " ]\n";
+                //std::cout << "Mouse Delta: [ x: " << globalInput.GetMouseDelta().x << " I y: " << globalInput.GetMouseDelta().y << " ]\n";
 
 
-            /* if (globalInput.IsKeyReleased(VK_LBUTTON))
-             {
-                 std::cout << "Right mouse is released.\n";
-             }
-             if (globalInput.IsKeyPressed(VK_MBUTTON))
-             {
-                 std::cout << "Middle mouse is pressed\n";*/
+                //std::cout << "Mouse Wheel Change: " << globalInput.GetWheelScroll() << std::endl;
+            }
             for (size_t i = 0; i < 255; i++)
             {
                 if (globalInput.IsKeyDown(i)) std::cout << "key: " << i << " is down" << '\n';
                 if (globalInput.IsKeyPressed(i)) std::cout << "key: " << i << " is pressed" << '\n';
                 if (globalInput.IsKeyReleased(i)) std::cout << "key: " << i << " is released" << '\n';
             }
+            if (globalInput.IsKeyReleased(VK_LBUTTON))
+            {
+                std::cout << "Right mouse is released.\n";
+            }
+            if (globalInput.IsKeyPressed(VK_MBUTTON))
+            {
+                std::cout << "Middle mouse is pressed\n";
+            }
+            if (globalInput.IsKeyDown('W') || globalInput.IsKeyDown('A') || globalInput.IsKeyDown('S') || globalInput.IsKeyDown('D'))
+            {
+                std::cout << "W A S D is down \n";
+            }
+            if (globalInput.IsKeyPressed('F'))
+            {
+                std::cout << "F is pressed \n";
 
+            }
+            if (globalInput.IsKeyDown('F'))
+            {
+                std::cout << "F is down\n";
 
+            }
+            if (globalInput.IsKeyReleased('F'))
+            {
+                std::cout << "F is released\n";
+
+            }
+            if (globalInput.IsKeyReleased(VK_SPACE))
+            {
+                std::cout << "Space is released\n";
+            }
         }
-
-
-
+      
+    
     }
+
     return (int) msg.wParam;
 }
 

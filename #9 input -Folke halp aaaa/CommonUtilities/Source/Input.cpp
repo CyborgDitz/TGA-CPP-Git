@@ -31,7 +31,7 @@ namespace CommonUtilities
 		{//qrikketed
 
 			myOldKey = myCurrentKey;
-			myCurrentState = myKeyState;
+			myOldMouseKey = myMouseKey;
 
 			myMouse.deltaWheel = myMouse.currentWheel - myMouse.previousWheel;
 			myMouse.previousWheel = myMouse.currentWheel;
@@ -52,32 +52,32 @@ namespace CommonUtilities
 
 				case (WM_LBUTTONDOWN):
 				{
-					myKeyState[ VK_LBUTTON]= true;
+					myMouseKey[ VK_LBUTTON]= true;
 					break;
 				}
 				case (WM_LBUTTONUP):
 
-					return myKeyState[ VK_LBUTTON] = false ;
+					return myMouseKey[ VK_LBUTTON] = false ;
 					break;
 				}
 				case (WM_RBUTTONDOWN):
 				{
-					return myKeyState[VK_RBUTTON] = true;
+					return myMouseKey[VK_RBUTTON] = true;
 					break;
 				}
 				case (WM_RBUTTONUP):
 				{
-					return 	myKeyState[ VK_RBUTTON] = true;
+					return 	myMouseKey[ VK_RBUTTON] = true;
 					break;
 				}
 				case (WM_MBUTTONDOWN):
 				{
-					return myKeyState[ VK_MBUTTON] = true ;
+					return myMouseKey[ VK_MBUTTON] = true ;
 					break;
 				}
 				case (WM_MBUTTONUP):
 				{
-					return myKeyState[ VK_MBUTTON] = false;
+					return myMouseKey[ VK_MBUTTON] = false;
 					break;
 				}
 				case(WM_MOUSEMOVE):
@@ -112,17 +112,17 @@ namespace CommonUtilities
 
 	bool Input::IsMouseButtonDown(const int aKeyCode) const
 	{
-		return myKeyState[true, aKeyCode] && myOldMouseKey[false, aKeyCode];
+		return myMouseKey[true, aKeyCode] && myOldMouseKey[false, aKeyCode];
 	}
 
 	bool Input::IsMouseButtonPressed(const int aKeyCode) const
 	{
-		return myKeyState[true, aKeyCode] && myOldMouseKey[true, aKeyCode];
+		return myMouseKey[true, aKeyCode] && myOldMouseKey[true, aKeyCode];
 	}
 
 	bool Input::IsMouseButtonReleased(const int aKeyCode) const
 	{
-		return myKeyState[false, aKeyCode] && myOldMouseKey[true, aKeyCode];
+		return myMouseKey[false, aKeyCode] && myOldMouseKey[true, aKeyCode];
 	}
 
 	void Input::UpdateMousePosition(UINT message)
