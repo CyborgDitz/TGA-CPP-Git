@@ -13,15 +13,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Uppgift 7 Vector/Untitled.canvas",
+                "file": "Diablo/Diablo 4.2.canvas",
                 "viewState": {
-                  "x": -406,
-                  "y": -163.62603878116374,
-                  "zoom": -1.4713712319488228
+                  "x": -3673.1208138624033,
+                  "y": 2832.9219390510725,
+                  "zoom": -0.47451561964507033
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "Untitled"
+              "title": "Diablo 4.2"
             }
           }
         ]
@@ -58,7 +58,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#TODO",
+                "query": "tag:#obstacle",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -207,18 +207,25 @@
   },
   "active": "b6f6a9acefbb0c4e",
   "lastOpenFiles": [
+    "Diablo/Pasted image 20261009091719.png",
+    "Diablo/Diablo 4.1.3 Divide Reviewed.canvas",
+    "Diablo/Diablo 4.2.canvas",
+    "2026-11-17.md",
+    "Qrikkopter/Untitled.canvas",
+    "Diablo/Diabllob.md",
+    "Untitled.canvas",
+    "Uppgift 7 Vector/Untitled.canvas",
+    "Untitled.md",
+    "Qrikkopter",
     "2026-11-05.md",
     "Linjär Algebra",
     "2026-10-27.md",
     "Uppgift 7 Vector/Pasted image 20261029103202.png",
-    "Diablo/Diablo 4.2.canvas",
     "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide.canvas",
     "Untitled 1.canvas",
-    "Uppgift 7 Vector/Untitled.canvas",
     "Uppgift 7 Vector/FixedVector.md",
     "Diablo/Reviewed archived Canvases/Diablo 4.2 Divide 1.canvas",
     "Uppgift 7 Vector",
-    "Untitled.canvas",
     "Reusable Class Canvas/SetName Janky Temp.md",
     "Uppgift 8 Bibliotek och timrr/Sammanfattning presentation.png",
     "CPPI - 23 - (Mer detaljer) Eget bibliotek och Timer.pptx",
@@ -226,20 +233,15 @@
     "Uppgift 8 Bibliotek och timrr/Uppgift 8.md",
     "Pasted image 20261020112839.png",
     "Uppgift 8 Bibliotek och timrr",
-    "Diablo/Pasted image 20261009091719.png",
     "Diablo/Pasted image 20261009091820.png",
     "Reusable Class Canvas/Combat Class 4.2.canvas",
     "Diablo/Canvases 3.1/Diablo Object Oriented Map.canvas",
-    "Reusable Class Canvas/Enemy class.canvas",
-    "Reusable Class Canvas/Combat Class 4.1.canvas",
-    "Diablo/Diabllob.md",
     "Reusable Class Canvas",
     "Untitled.base",
     "Combat Class.md",
     "Diablo/Questions Diablo.md",
     "Diablo/Reviewed archived Canvases",
     "Diablo/Canvases 3.1",
-    "Diablo/decrepit Canvas",
     "Welcome.md"
   ]
 }

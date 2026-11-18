@@ -55,27 +55,25 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
             TranslateMessage(&msg);
             DispatchMessage(&msg);
             globalInput.UpdateEvents(msg.message, msg.wParam, msg.lParam);
-            if (globalInput.IsKeyDown(VK_LBUTTON))
+            if (globalInput.IsMouseButtonDown(VK_LBUTTON))
             {
                 std::cout << "Left mouse button is down \n";
             }
-            /*  KEY_LMB = VK_LBUTTON,
-                  KEY_RMB = VK_RBUTTON,
-                  VK_MBUTTON = VK_MBUTTON,*/
-            if (globalInput.IsKeyPressed(VK_LBUTTON))
+           
+            if (globalInput.IsMouseButtonPressed(VK_LBUTTON))
             {
-                std::cout << "Right mouse button is down.\n";
+                std::cout << "Legt mouse button is pressed.\n";
             }
-            if (globalInput.IsKeyDown(VK_LBUTTON))
+            if (globalInput.IsMouseButtonReleased(VK_LBUTTON))
             {
 
+                //td::cout << "Right mouse button is Up.\n";
+                //std::cout << "Mouse Position: [ x: " << globalInput.GetMousePosition().x
+                //    << " I y: " << globalInput.GetMouseDelta().y << " ]\n";
+                //std::cout << "Mouse Delta: [ x: " << globalInput.GetMouseDelta().x << " I y: " << globalInput.GetMouseDelta().y << " ]\n";
 
-                std::cout << "Mouse Position: [ x: " << globalInput.GetMousePosition().x
-                    << " I y: " << globalInput.GetMouseDelta().y << " ]\n";
-                std::cout << "Mouse Delta: [ x: " << globalInput.GetMouseDelta().x << " I y: " << globalInput.GetMouseDelta().y << " ]\n";
 
-
-                std::cout << "Mouse Wheel Change: " << globalInput.GetWheelScroll() << std::endl;
+                //std::cout << "Mouse Wheel Change: " << globalInput.GetWheelScroll() << std::endl;
             }
             for (size_t i = 0; i < 255; i++)
             {
@@ -168,7 +166,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
     freopen("conout$", "w", stdout);
     freopen("conout$", "w", stderr);
     printf("Debugging Window:\n");
-    printf("Try pressing buttons: Space, Left mouse, Right mouse, Middle mouse, F, & WASD to test functionality!\n");
+    printf("Keys can be pressed!\n");
    hInst = hInstance; // Store instance handle in our global variable
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);

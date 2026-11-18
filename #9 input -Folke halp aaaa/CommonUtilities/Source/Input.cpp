@@ -77,7 +77,7 @@ namespace CommonUtilities
 				}
 				case (WM_MBUTTONUP):
 				{
-					return myMouseKey[ VK_MBUTTON] = isValid;
+					return myMouseKey[ VK_MBUTTON] = false;
 					break;
 				}
 				case(WM_MOUSEMOVE):

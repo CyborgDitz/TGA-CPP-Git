@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "C:\\Users\\sebastian.niva\\OneDrive - Academedia\\Desktop\\vektor-tests\\Intermediate\\1 - Vectors-x64-Debug\\Vector3.obj",
+            "outputs": [
+                "C:\\Users\\sebastian.niva\\OneDrive - Academedia\\Desktop\\vektor-tests\\Intermediate\\1 - Vectors-x64-Debug\\Vector3.h.obj.dt.module.json",
+                "C:\\Users\\sebastian.niva\\OneDrive - Academedia\\Desktop\\vektor-tests\\Intermediate\\1 - Vectors-x64-Debug\\Vector3.h.obj.dt.d.json",
+                "C:\\Users\\sebastian.niva\\OneDrive - Academedia\\Desktop\\vektor-tests\\Intermediate\\1 - Vectors-x64-Debug\\1 - Vectors.pch"
+            ],
+            "requires": []
+        }
+    ]
+}

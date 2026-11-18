@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\CommonUtilities\\vektor-tests\\Intermediate\\1 - Vectors-x64-Debug\\stdafx.obj",
+            "outputs": [
+                "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\CommonUtilities\\vektor-tests\\Intermediate\\1 - Vectors-x64-Debug\\stdafx.h.obj.dt.module.json",
+                "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\CommonUtilities\\vektor-tests\\Intermediate\\1 - Vectors-x64-Debug\\stdafx.h.obj.dt.d.json",
+                "C:\\Users\\Jester.ditz\\OneDrive - Academedia\\TGACPPI26\\CommonUtilities\\vektor-tests\\Intermediate\\1 - Vectors-x64-Debug\\1 - Vectors.pch"
+            ],
+            "requires": []
+        }
+    ]
+}
