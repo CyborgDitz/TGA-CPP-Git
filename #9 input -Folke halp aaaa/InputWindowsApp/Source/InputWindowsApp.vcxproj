@@ -149,6 +149,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\Include\Input.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="InputWindowsApp.h" />
     <ClInclude Include="Resource.h" />

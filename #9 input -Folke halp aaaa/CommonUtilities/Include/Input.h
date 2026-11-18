@@ -32,14 +32,12 @@ namespace CommonUtilities
 		bool IsKeyPressed(const int aKeyCode) const;
 		bool IsKeyReleased(const int aKeyCode) const;
 		bool IsKeyDown(const int aKeyCode) const;
-		bool IsMouseButtonPressed(const int aKeyCode) const;
-		bool IsMouseButtonDown(const int aKeyCode) const;
-		bool IsMouseButtonReleased(const int aKeyCode) const;
+	
 		
 		void UpdateMousePosition(UINT message);
 		
 		Vector2Pos GetMousePosition() const { return myMouse.myCurrentPos; }
-		Vector2Pos GetOldMousePosition() const { return myMouse.myOldPos; }
+		Vector2Pos GetOldMousePosition() const { return myMouseW.myOldPos; }
 		Vector2Pos GetMouseDelta() const { return myMouse.myPosDelta; }
 		float GetWheelScroll() const
 		{
