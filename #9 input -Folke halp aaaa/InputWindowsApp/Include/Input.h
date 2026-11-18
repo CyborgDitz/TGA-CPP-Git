@@ -56,6 +56,7 @@ namespace CommonUtilities
 			const int myKeyMax = 256;
 			std::array<bool, 256>myCurrentKey;
 			std::array<bool, 256>myOldKey;
+			std::array<bool, 256>myStoredKey;
 			std::array<bool, 256>myMouseKey;
 			std::array<bool, 256>myOldMouseKey;
 			

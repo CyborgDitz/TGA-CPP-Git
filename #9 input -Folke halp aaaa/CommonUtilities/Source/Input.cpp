@@ -8,19 +8,12 @@
 namespace CommonUtilities
 {
 	
-	const int Input::GetKeyCode(const WPARAM wParam) const
-	{
 
-		if (0 < wParam && wParam <= myKeyMax)
-		{
-			return (wParam);
-		}
-		return 0;
-	}
 	bool Input::IsKeyValid(const WPARAM wParam) const
 	{
 		if (0 < wParam && wParam <= myKeyMax)
 		{
+			
 			return true;
 		}
 		return false;
@@ -28,70 +21,48 @@ namespace CommonUtilities
 	bool Input::UpdateEvents(UINT message, WPARAM wParam, LPARAM lParam)
 	{
 		bool isValid = IsKeyValid(wParam);
-		{//qrikketed
 
+		{//qrikketed
+			myStoredKey = myCurrentKey;
 			myOldKey = myCurrentKey;
 			myOldMouseKey = myMouseKey;
 
-			myMouse.deltaWheel = myMouse.currentWheel - myMouse.previousWheel;
-			myMouse.previousWheel = myMouse.currentWheel;
+			Input::UpdateMousePosition(message);
 		}
 		if (isValid == true)
 		{
+			
 			switch (message)
 			{
-				case (WM_KEYDOWN):
-				{
-					myCurrentKey[ wParam] =true;
-					break;
-				}
-				case(WM_KEYUP):
-				{
-					myCurrentKey[ wParam] = false;
-					break;
-
-				case (WM_LBUTTONDOWN):
-				{
-					myMouseKey[ VK_LBUTTON]= true;
-					break;
-				}
-				case (WM_LBUTTONUP):
-
-					return myMouseKey[ VK_LBUTTON] = false ;
-					break;
-				}
-				case (WM_RBUTTONDOWN):
-				{
-					return myMouseKey[VK_RBUTTON] = true;
-					break;
-				}
-				case (WM_RBUTTONUP):
-				{
-					return 	myMouseKey[ VK_RBUTTON] = true;
-					break;
-				}
-				case (WM_MBUTTONDOWN):
-				{
-					return myMouseKey[ VK_MBUTTON] = true ;
-					break;
-				}
-				case (WM_MBUTTONUP):
-				{
-					return myMouseKey[ VK_MBUTTON] = false;
-					break;
-				}
-				case(WM_MOUSEMOVE):
-				{
-					 UpdateMousePosition(WM_MOUSEMOVE);
-					break;
-				}
-				default:
-				{
-					 	isValid = false;
-					break;
-				}
+			case (WM_KEYDOWN):
+			{
+				myStoredKey[wParam] = true;
+				break;
 			}
-				return isValid;
+			case(WM_KEYUP):
+			{
+				myStoredKey[wParam] = false;
+				break;
+
+			
+			}
+			case WM_MOUSEWHEEL: 
+			{
+				float wheelDelta = GET_WHEEL_DELTA_WPARAM(wParam);
+				myMouse.currentWheel += wheelDelta;
+				return true;
+			}
+			case(WM_MOUSEMOVE):
+			{
+				UpdateMousePosition(WM_MOUSEMOVE);
+				break;
+			}
+			default:
+			{
+				return  false;
+
+			}
+			}
 		}
 	}
 	bool Input::IsKeyPressed(const int aKeyCode) const
@@ -129,13 +100,15 @@ namespace CommonUtilities
 	{
 		myMouse.myOldPos = myMouse.myCurrentPos;
 
-		myMouse.myCurrentPos.x = GET_X_LPARAM(message);
-		myMouse.myCurrentPos.y = GET_Y_LPARAM(message);
-
 		myMouse.myPosDelta = myMouse.myCurrentPos;
 
-		myMouse.myPosDelta.x = myMouse.myCurrentPos.x - myMouse.myOldPos.x;
-		myMouse.myPosDelta.y = myMouse.myCurrentPos.y - myMouse.myOldPos.y;
+		myMouse.myPosDelta.x -= myMouse.myOldPos.x;
+		myMouse.myPosDelta.y -= myMouse.myOldPos.y;
+
+		
+
+		myMouse.deltaWheel = myMouse.currentWheel - myMouse.previousWheel;
+		myMouse.previousWheel = myMouse.currentWheel;
 	}
 
 }

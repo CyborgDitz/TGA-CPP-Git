@@ -22,102 +22,129 @@ LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
-                     _In_opt_ HINSTANCE hPrevInstance,
-                     _In_ LPWSTR    lpCmdLine,
-                     _In_ int       nCmdShow)
+	_In_opt_ HINSTANCE hPrevInstance,
+	_In_ LPWSTR    lpCmdLine,
+	_In_ int       nCmdShow)
 {
-    UNREFERENCED_PARAMETER(hPrevInstance);
-    UNREFERENCED_PARAMETER(lpCmdLine);
+	UNREFERENCED_PARAMETER(hPrevInstance);
+	UNREFERENCED_PARAMETER(lpCmdLine);
 
-    CommonUtilities::Input globalInput;
-    // Initialize global strings
-    LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
-    LoadStringW(hInstance, IDC_INPUTWINDOWSAPP, szWindowClass, MAX_LOADSTRING);
-    MyRegisterClass(hInstance);
+	CommonUtilities::Input globalInput;
+	// Initialize global strings
+	LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
+	LoadStringW(hInstance, IDC_INPUTWINDOWSAPP, szWindowClass, MAX_LOADSTRING);
+	MyRegisterClass(hInstance);
 
-    // Perform application initialization:
-    if (!InitInstance (hInstance, nCmdShow))
-    {
-        return FALSE;
-    }
+	// Perform application initialization:
+	if (!InitInstance(hInstance, nCmdShow))
+	{
+		return FALSE;
+	}
 
-    HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_INPUTWINDOWSAPP));
+	HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_INPUTWINDOWSAPP));
 
-    MSG msg;
-    // TODO: Place code here.
-    using namespace CommonUtilities;
-    // Main message loop:
-   
-    while (GetMessage(&msg, nullptr, 0, 0))
-    {
-        if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
-        {
-            TranslateMessage(&msg);
-            DispatchMessage(&msg);
-            globalInput.UpdateEvents(msg.message, msg.wParam, msg.lParam);
-            if (globalInput.IsMouseButtonDown(VK_LBUTTON))
-            {
-                std::cout << "Left mouse button is down \n";
-            }
-           
-            if (globalInput.IsMouseButtonPressed(VK_LBUTTON))
-            {
-                std::cout << "Legt mouse button is pressed.\n";
-            }
-            if (globalInput.IsMouseButtonReleased(VK_LBUTTON))
-            {
+	MSG msg;
+	// TODO: Place code here.
+	using namespace CommonUtilities;
+	// Main message loop:
+	//td::cout << "Right mouse button is Up.\n";
+				//std::cout << "Mouse Position: [ x: " << globalInput.GetMousePosition().x
+				//    << " I y: " << globalInput.GetMouseDelta().y << " ]\n";
+				//std::cout << "Mouse Delta: [ x: " << globalInput.GetMouseDelta().x << " I y: " << globalInput.GetMouseDelta().y << " ]\n";
 
-                //td::cout << "Right mouse button is Up.\n";
-                //std::cout << "Mouse Position: [ x: " << globalInput.GetMousePosition().x
-                //    << " I y: " << globalInput.GetMouseDelta().y << " ]\n";
-                //std::cout << "Mouse Delta: [ x: " << globalInput.GetMouseDelta().x << " I y: " << globalInput.GetMouseDelta().y << " ]\n";
+				/*for (size_t i = 0; i < 255; i++)
+				{
+					if (globalInput.IsKeyDown(i))
+					{
+						std::cout << "key: " << i << " is down" << '\n';
+					}
+					if (globalInput.IsKeyPressed(i))
+
+					{
+						std::cout << "key: " << i << " is pressed" << '\n';
+					}
+					if (globalInput.IsKeyReleased(i))
+					{
+						std::cout << "key: " << i << " is released" << '\n';
+					}
+				}*/
+				//std::cout << "Mouse Wheel Change: " << globalInput.GetWheelScroll() << std::endl;
+	while (GetMessage(&msg, nullptr, 0, 0))
+	{
+		if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+		{
+			TranslateMessage(&msg);
+			DispatchMessage(&msg);
+			globalInput.UpdateEvents(msg.message, msg.wParam, msg.lParam);
+			if (globalInput.IsMouseButtonDown(VK_LBUTTON))
+			{
+				std::cout << "Left mouse button is down \n";
+			}
+
+			if (globalInput.IsMouseButtonPressed(VK_LBUTTON))
+			{
+				std::cout << "Legt mouse button is pressed.\n";
+			}
+			if (globalInput.IsMouseButtonReleased(VK_LBUTTON))
+			{
+
+			}
+			if (globalInput.IsMouseButtonDown(VK_RBUTTON))
+			{
+				std::cout << "R mouse button is down \n";
+			}
+
+			if (globalInput.IsMouseButtonPressed(VK_RBUTTON))
+			{
+				std::cout << "R mouse button is pressed.\n";
+			}
+			if (globalInput.IsMouseButtonReleased(VK_RBUTTON))
+			{
+				std::cout << "R mouse button is releaesd\n";
+			}
+			if (globalInput.IsMouseButtonDown(VK_MBUTTON))
+			{
+				std::cout << "Mid mouse button is down \n";
+			}
+
+			if (globalInput.IsMouseButtonPressed(VK_MBUTTON))
+			{
+				std::cout << "Mid mouse button is pressed.\n";
+			}
+			if (globalInput.IsMouseButtonReleased(VK_MBUTTON))
+			{
+				std::cout << "Midmouse button is released.\n";
+			}
+			}
+			if (globalInput.IsKeyDown('W') || globalInput.IsKeyDown('A') || globalInput.IsKeyDown('S') || globalInput.IsKeyDown('D'))
+			{
+				std::cout << "W A S D is down \n";
+			}
+			if (globalInput.IsKeyPressed('F'))
+			{
+				std::cout << "F is pressed \n";
+
+			}
+			if (globalInput.IsKeyDown('F'))
+			{
+				std::cout << "F is down\n";
+
+			}
+			if (globalInput.IsKeyReleased('F'))
+			{
+				std::cout << "F is released\n";
+
+			}
+			if (globalInput.IsKeyReleased(VK_SPACE))
+			{
+				std::cout << "Space is released\n";
+			}
+		}
 
 
-                //std::cout << "Mouse Wheel Change: " << globalInput.GetWheelScroll() << std::endl;
-            }
-            for (size_t i = 0; i < 255; i++)
-            {
-                if (globalInput.IsKeyDown(i)) std::cout << "key: " << i << " is down" << '\n';
-                if (globalInput.IsKeyPressed(i)) std::cout << "key: " << i << " is pressed" << '\n';
-                if (globalInput.IsKeyReleased(i)) std::cout << "key: " << i << " is released" << '\n';
-            }
-            if (globalInput.IsKeyReleased(VK_LBUTTON))
-            {
-                std::cout << "Right mouse is released.\n";
-            }
-            if (globalInput.IsKeyPressed(VK_MBUTTON))
-            {
-                std::cout << "Middle mouse is pressed\n";
-            }
-            if (globalInput.IsKeyDown('W') || globalInput.IsKeyDown('A') || globalInput.IsKeyDown('S') || globalInput.IsKeyDown('D'))
-            {
-                std::cout << "W A S D is down \n";
-            }
-            if (globalInput.IsKeyPressed('F'))
-            {
-                std::cout << "F is pressed \n";
+	
 
-            }
-            if (globalInput.IsKeyDown('F'))
-            {
-                std::cout << "F is down\n";
-
-            }
-            if (globalInput.IsKeyReleased('F'))
-            {
-                std::cout << "F is released\n";
-
-            }
-            if (globalInput.IsKeyReleased(VK_SPACE))
-            {
-                std::cout << "Space is released\n";
-            }
-        }
-      
-    
-    }
-
-    return (int) msg.wParam;
+	return (int)msg.wParam;
 }
 
 
@@ -129,23 +156,23 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 //
 ATOM MyRegisterClass(HINSTANCE hInstance)
 {
-    WNDCLASSEXW wcex;
+	WNDCLASSEXW wcex;
 
-    wcex.cbSize = sizeof(WNDCLASSEX);
+	wcex.cbSize = sizeof(WNDCLASSEX);
 
-    wcex.style          = CS_HREDRAW | CS_VREDRAW;
-    wcex.lpfnWndProc    = WndProc;
-    wcex.cbClsExtra     = 0;
-    wcex.cbWndExtra     = 0;
-    wcex.hInstance      = hInstance;
-    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_INPUTWINDOWSAPP));
-    wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
-    wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
-    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_INPUTWINDOWSAPP);
-    wcex.lpszClassName  = szWindowClass;
-    wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
+	wcex.style = CS_HREDRAW | CS_VREDRAW;
+	wcex.lpfnWndProc = WndProc;
+	wcex.cbClsExtra = 0;
+	wcex.cbWndExtra = 0;
+	wcex.hInstance = hInstance;
+	wcex.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_INPUTWINDOWSAPP));
+	wcex.hCursor = LoadCursor(nullptr, IDC_ARROW);
+	wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
+	wcex.lpszMenuName = MAKEINTRESOURCEW(IDC_INPUTWINDOWSAPP);
+	wcex.lpszClassName = szWindowClass;
+	wcex.hIconSm = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
 
-    return RegisterClassExW(&wcex);
+	return RegisterClassExW(&wcex);
 }
 
 //
@@ -159,27 +186,27 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 //        create and display the main program window.
 //
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
-   
+
 {
-    AllocConsole();
-    freopen("conin$", "r", stdin);
-    freopen("conout$", "w", stdout);
-    freopen("conout$", "w", stderr);
-    printf("Debugging Window:\n");
-    printf("Keys can be pressed!\n");
-   hInst = hInstance; // Store instance handle in our global variable
-   HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
-      CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
+	AllocConsole();
+	freopen("conin$", "r", stdin);
+	freopen("conout$", "w", stdout);
+	freopen("conout$", "w", stderr);
+	printf("Debugging Window:\n");
+	printf("Keys can be pressed!\n");
+	hInst = hInstance; // Store instance handle in our global variable
+	HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
+		CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
 
-   if (!hWnd)
-   {
-      return FALSE;
-   }
+	if (!hWnd)
+	{
+		return FALSE;
+	}
 
-   ShowWindow(hWnd, nCmdShow);
-   UpdateWindow(hWnd);
+	ShowWindow(hWnd, nCmdShow);
+	UpdateWindow(hWnd);
 
-   return TRUE;
+	return TRUE;
 }
 
 //
@@ -194,58 +221,58 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-    switch (message)
-    {
-    case WM_COMMAND:
-        {
-            int wmId = LOWORD(wParam);
-            // Parse the menu selections:
-            switch (wmId)
-            {
-            case IDM_ABOUT:
-                DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
-                break;
-            case IDM_EXIT:
-                DestroyWindow(hWnd);
-                break;
-            default:
-                return DefWindowProc(hWnd, message, wParam, lParam);
-            }
-        }
-        break;
-    case WM_PAINT:
-        {
-            PAINTSTRUCT ps;
-            BeginPaint(hWnd, &ps);
-            // TODO: Add any drawing code here...
-            EndPaint(hWnd, &ps);
-        }
-        break;
-    case WM_DESTROY:
-        PostQuitMessage(0);
-        break;
-    default:
-        return DefWindowProc(hWnd, message, wParam, lParam);
-    }
-    return 0;
+	switch (message)
+	{
+	case WM_COMMAND:
+	{
+		int wmId = LOWORD(wParam);
+		// Parse the menu selections:
+		switch (wmId)
+		{
+		case IDM_ABOUT:
+			DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
+			break;
+		case IDM_EXIT:
+			DestroyWindow(hWnd);
+			break;
+		default:
+			return DefWindowProc(hWnd, message, wParam, lParam);
+		}
+	}
+	break;
+	case WM_PAINT:
+	{
+		PAINTSTRUCT ps;
+		BeginPaint(hWnd, &ps);
+		// TODO: Add any drawing code here...
+		EndPaint(hWnd, &ps);
+	}
+	break;
+	case WM_DESTROY:
+		PostQuitMessage(0);
+		break;
+	default:
+		return DefWindowProc(hWnd, message, wParam, lParam);
+	}
+	return 0;
 }
 
 // Message handler for about box.
 INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 {
-    UNREFERENCED_PARAMETER(lParam);
-    switch (message)
-    {
-    case WM_INITDIALOG:
-        return (INT_PTR)TRUE;
+	UNREFERENCED_PARAMETER(lParam);
+	switch (message)
+	{
+	case WM_INITDIALOG:
+		return (INT_PTR)TRUE;
 
-    case WM_COMMAND:
-        if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL)
-        {
-            EndDialog(hDlg, LOWORD(wParam));
-            return (INT_PTR)TRUE;
-        }
-        break;
-    }
-    return (INT_PTR)FALSE;
+	case WM_COMMAND:
+		if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL)
+		{
+			EndDialog(hDlg, LOWORD(wParam));
+			return (INT_PTR)TRUE;
+		}
+		break;
+	}
+	return (INT_PTR)FALSE;
 }
