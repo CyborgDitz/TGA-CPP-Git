@@ -140,10 +140,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 				std::cout << "Space is released\n";
 			}
 		}
-
-
-	
-
 	return (int)msg.wParam;
 }
 
